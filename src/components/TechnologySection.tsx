@@ -18,24 +18,24 @@ const TechnologySection = () => {
             </h2>
             
             <div className="space-y-6">
-              <div className="space-y-3">
-                <h3 className="text-2xl font-semibold">Gravidade Artificial</h3>
+              <div className="space-y-3 p-4 rounded-2xl hover:bg-card/50 cursor-pointer transition-all duration-300 group">
+                <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors">Gravidade Artificial</h3>
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   Sistema de rotação controlada que simula 0.9G, mantendo seu corpo saudável 
                   e proporcionando conforto semelhante à Terra.
                 </p>
               </div>
 
-              <div className="space-y-3">
-                <h3 className="text-2xl font-semibold">Janelas Inteligentes</h3>
+              <div className="space-y-3 p-4 rounded-2xl hover:bg-card/50 cursor-pointer transition-all duration-300 group">
+                <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors">Janelas Inteligentes</h3>
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   Vidros com proteção UV adaptativa e controle de opacidade, permitindo 
                   vistas deslumbrantes com total segurança.
                 </p>
               </div>
 
-              <div className="space-y-3">
-                <h3 className="text-2xl font-semibold">Clima Personalizado</h3>
+              <div className="space-y-3 p-4 rounded-2xl hover:bg-card/50 cursor-pointer transition-all duration-300 group">
+                <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors">Clima Personalizado</h3>
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   Controle individual de temperatura, umidade e composição do ar em cada 
                   residência, otimizado por IA.
@@ -44,12 +44,12 @@ const TechnologySection = () => {
             </div>
           </div>
 
-          <Card className="p-2 rounded-3xl border-0 bg-gradient-to-br from-primary/10 to-purple-500/10 hover-lift">
+          <Card className="p-2 rounded-3xl border-0 bg-gradient-to-br from-primary/10 to-purple-500/10 hover-lift cursor-pointer group">
             <div className="rounded-2xl overflow-hidden bg-card">
               <img 
                 src="/src/assets/lab-1.png" 
                 alt="Laboratório Espacial Cosmora" 
-                className="w-full h-auto"
+                className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
               />
             </div>
           </Card>

@@ -11,7 +11,7 @@ const HeroSection = () => {
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-[10s]"
         >
           <source src="/videos/nasa-hero.mp4" type="video/mp4" />
         </video>
@@ -33,7 +33,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Button 
               size="lg" 
-              className="rounded-full bg-primary hover:bg-primary/90 shadow-cosmic text-lg px-8 py-6 group"
+              className="rounded-full bg-primary hover:bg-primary/90 hover:scale-105 shadow-cosmic text-lg px-8 py-6 group transition-all duration-300"
             >
               Explore Cosmora
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -42,7 +42,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white text-lg px-8 py-6 group"
+              className="rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:scale-105 text-white text-lg px-8 py-6 group transition-all duration-300"
             >
               <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
               Assista ao Vídeo

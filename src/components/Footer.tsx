@@ -21,35 +21,35 @@ const Footer = () => {
               <Button 
                 size="icon" 
                 variant="outline" 
-                className="rounded-full w-9 h-9 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all"
+                className="rounded-full w-9 h-9 hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-110 transition-all duration-300"
               >
                 <Facebook className="w-4 h-4" />
               </Button>
               <Button 
                 size="icon" 
                 variant="outline" 
-                className="rounded-full w-9 h-9 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all"
+                className="rounded-full w-9 h-9 hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-110 transition-all duration-300"
               >
                 <Twitter className="w-4 h-4" />
               </Button>
               <Button 
                 size="icon" 
                 variant="outline" 
-                className="rounded-full w-9 h-9 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all"
+                className="rounded-full w-9 h-9 hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-110 transition-all duration-300"
               >
                 <Instagram className="w-4 h-4" />
               </Button>
               <Button 
                 size="icon" 
                 variant="outline" 
-                className="rounded-full w-9 h-9 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all"
+                className="rounded-full w-9 h-9 hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-110 transition-all duration-300"
               >
                 <Linkedin className="w-4 h-4" />
               </Button>
               <Button 
                 size="icon" 
                 variant="outline" 
-                className="rounded-full w-9 h-9 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all"
+                className="rounded-full w-9 h-9 hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-110 transition-all duration-300"
               >
                 <Youtube className="w-4 h-4" />
               </Button>
@@ -59,21 +59,21 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Residências</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">Módulos Studio</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Módulos Deluxe</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Módulos Penthouse</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Plantas e Preços</a></li>
+              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Módulos Studio</a></li>
+              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Módulos Deluxe</a></li>
+              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Módulos Penthouse</a></li>
+              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Plantas e Preços</a></li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-semibold mb-4">Sobre</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">Nossa Missão</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Equipe</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Tecnologia</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Sustentabilidade</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Imprensa</a></li>
+              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Nossa Missão</a></li>
+              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Equipe</a></li>
+              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Tecnologia</a></li>
+              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Sustentabilidade</a></li>
+              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Imprensa</a></li>
             </ul>
           </div>
 
@@ -86,9 +86,9 @@ const Footer = () => {
               <Input 
                 type="email" 
                 placeholder="Seu e-mail" 
-                className="rounded-full border-border/50"
+                className="rounded-full border-border/50 focus:border-primary transition-colors"
               />
-              <Button className="rounded-full bg-primary hover:bg-primary/90 shrink-0">
+              <Button className="rounded-full bg-primary hover:bg-primary/90 hover:scale-105 transition-all duration-300 shrink-0">
                 Inscrever
               </Button>
             </div>
@@ -98,9 +98,9 @@ const Footer = () => {
         <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p>© 2026 Cosmora. Todos os direitos reservados.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-primary transition-colors">Privacidade</a>
-            <a href="#" className="hover:text-primary transition-colors">Termos</a>
-            <a href="#" className="hover:text-primary transition-colors">Cookies</a>
+            <a href="#" className="hover:text-primary hover:underline transition-all">Privacidade</a>
+            <a href="#" className="hover:text-primary hover:underline transition-all">Termos</a>
+            <a href="#" className="hover:text-primary hover:underline transition-all">Cookies</a>
           </div>
         </div>
       </div>
