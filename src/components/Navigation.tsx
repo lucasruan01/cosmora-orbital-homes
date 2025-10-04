@@ -33,16 +33,16 @@ const Navigation = () => {
             </a>
             
             <div className="hidden md:flex items-center gap-8">
-              <a href="#residencias" className="text-sm font-medium hover:text-primary transition-colors">
+              <a href="#residencias" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
                 Residências
               </a>
-              <a href="#tecnologia" className="text-sm font-medium hover:text-primary transition-colors">
+              <a href="#tecnologia" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
                 Tecnologia
               </a>
-              <a href="#vida" className="text-sm font-medium hover:text-primary transition-colors">
+              <a href="#vida" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
                 Vida no Espaço
               </a>
-              <a href="#galeria" className="text-sm font-medium hover:text-primary transition-colors">
+              <a href="#galeria" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
                 Galeria
               </a>
             </div>
@@ -51,11 +51,11 @@ const Navigation = () => {
           <div className="flex items-center gap-4">
             <Button 
               variant="ghost" 
-              className="hidden md:inline-flex rounded-full hover:bg-secondary/50"
+              className={`hidden md:inline-flex rounded-full hover:bg-secondary/50 ${scrolled ? 'text-foreground' : 'text-white'}`}
             >
               Agendar Visita
             </Button>
-            <Button className="rounded-full bg-primary hover:bg-primary/90 shadow-cosmic">
+            <Button className="rounded-full bg-primary hover:bg-primary/90 shadow-cosmic text-white">
               Reservar Agora
             </Button>
           </div>
