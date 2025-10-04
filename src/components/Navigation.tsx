@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import cosmoraLogo from '@/assets/cosmora-logo.png';
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -26,9 +27,9 @@ const Navigation = () => {
           <div className="flex items-center gap-12">
             <a href="#" className="flex items-center gap-3 group">
               <img 
-                src="/src/assets/cosmora-logo.png" 
+                src={cosmoraLogo} 
                 alt="Cosmora" 
-                className="h-12 w-auto transition-transform duration-300 group-hover:scale-110"
+                className={`h-20 w-auto transition-all duration-300 group-hover:scale-110 ${scrolled ? 'brightness-0' : 'brightness-100'}`}
               />
             </a>
             

@@ -1,6 +1,7 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Sparkles } from 'lucide-react';
+import lab1 from '@/assets/lab-1.png';
 
 const TechnologySection = () => {
   return (
@@ -47,7 +48,7 @@ const TechnologySection = () => {
           <Card className="p-2 rounded-3xl border-0 bg-gradient-to-br from-primary/10 to-purple-500/10 hover-lift cursor-pointer group">
             <div className="rounded-2xl overflow-hidden bg-card">
               <img 
-                src="/src/assets/lab-1.png" 
+                src={lab1} 
                 alt="Laboratório Espacial Cosmora" 
                 className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
               />
