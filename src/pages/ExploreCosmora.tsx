@@ -96,9 +96,6 @@ const ExploreCosmora = () => {
                       
                       <div className="mt-8 p-6 bg-muted/50 rounded-lg border border-border/50">
                         <h4 className="text-lg font-semibold mb-3 text-foreground">Vídeo Explicativo</h4>
-                        <p className="text-sm text-muted-foreground mb-4">
-                          Assista ao vídeo completo sobre o habitat Cosmora:
-                        </p>
                         <a 
                           href="https://www.youtube.com/watch?v=bVzppWSIFU0" 
                           target="_blank" 
