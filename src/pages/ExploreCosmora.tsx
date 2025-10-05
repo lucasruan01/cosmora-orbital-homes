@@ -1,3 +1,4 @@
+import { Youtube } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -98,6 +99,22 @@ const ExploreCosmora = () => {
                       <p className="text-sm text-muted-foreground italic mt-4">
                         Nota: A aplicação exata de ligas alumínio-lítio-titânio ou a integração total com radiadores hidráulicos precisa de estudo específico para viabilidade, mas os princípios de laços térmicos líquidos e isolamento com recursos líquidos são validados.
                       </p>
+                      
+                      <div className="mt-8 p-6 bg-muted/50 rounded-lg border border-border/50">
+                        <h4 className="text-lg font-semibold mb-3 text-foreground">Vídeo Explicativo</h4>
+                        <p className="text-sm text-muted-foreground mb-4">
+                          Assista ao vídeo completo sobre o habitat Cosmora:
+                        </p>
+                        <a 
+                          href="https://www.youtube.com/watch?v=bVzppWSIFU0" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+                        >
+                          <Youtube className="w-5 h-5" />
+                          Cosmora Habitat Video
+                        </a>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
