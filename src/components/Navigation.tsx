@@ -61,12 +61,18 @@ const Navigation = () => {
               <a href="#residencias" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
                 Residências
               </a>
-              <a href="#tecnologia" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
+              <Link to="/tecnologia" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
                 Tecnologia
-              </a>
+              </Link>
               <a href="#vida" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
                 Vida no Espaço
               </a>
+              <Link to="/nossa-missao" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
+                Nossa Missão
+              </Link>
+              <Link to="/equipe" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
+                Equipe
+              </Link>
               <a href="#galeria" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
                 Galeria
               </a>

@@ -8,6 +8,9 @@ import Auth from "./pages/Auth";
 import GravidadeArtificial from "./pages/GravidadeArtificial";
 import JanelasInteligentes from "./pages/JanelasInteligentes";
 import ClimaPersonalizado from "./pages/ClimaPersonalizado";
+import NossaMissao from "./pages/NossaMissao";
+import Equipe from "./pages/Equipe";
+import Tecnologia from "./pages/Tecnologia";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +27,9 @@ const App = () => (
           <Route path="/gravidade-artificial" element={<GravidadeArtificial />} />
           <Route path="/janelas-inteligentes" element={<JanelasInteligentes />} />
           <Route path="/clima-personalizado" element={<ClimaPersonalizado />} />
+          <Route path="/nossa-missao" element={<NossaMissao />} />
+          <Route path="/equipe" element={<Equipe />} />
+          <Route path="/tecnologia" element={<Tecnologia />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

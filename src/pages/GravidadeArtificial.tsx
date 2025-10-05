@@ -81,7 +81,7 @@ const GravidadeArtificial = () => {
               Gravidade Artificial
             </h1>
             <p className="text-2xl text-muted-foreground">
-              0,9 G de Conforto e Saúde no Espaço
+              9.8G de Conforto e Saúde no Espaço
             </p>
           </div>
 
@@ -101,7 +101,7 @@ const GravidadeArtificial = () => {
                   Por isso, nossas casas espaciais utilizam o princípio da gravidade artificial por rotação, inspirado em estudos da NASA.
                 </p>
                 <p>
-                  Ao girar lentamente, a estrutura cria uma força centrífuga que reproduz até 90% da gravidade terrestre (0,9 g), o suficiente para manter músculos e ossos ativos, garantindo conforto e saúde durante longas jornadas pelo espaço.
+                  Ao girar lentamente, a estrutura cria uma força centrífuga que reproduz até 100% da gravidade terrestre (9.8G), o suficiente para manter músculos e ossos ativos, garantindo conforto e saúde durante longas jornadas pelo espaço.
                 </p>
               </div>
             </Card>
@@ -133,7 +133,7 @@ const GravidadeArtificial = () => {
               }`}
             >
               <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Benefícios:</h2>
-              <p className="text-lg mb-6">Com 0,9 g simulada, nossas moradias espaciais mantêm o corpo em equilíbrio:</p>
+              <p className="text-lg mb-6">Com 9.8G simulada, nossas moradias espaciais mantêm o corpo em equilíbrio:</p>
               <ul className="space-y-3 text-lg">
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
