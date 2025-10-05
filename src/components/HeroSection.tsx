@@ -98,10 +98,18 @@ const HeroSection = () => {
           <div className="relative">
             <video
               ref={videoRef}
-              controls
               className="w-full h-auto rounded-lg"
               onPlay={() => setIsPlaying(true)}
               onPause={() => setIsPlaying(false)}
+              onClick={() => {
+                if (videoRef.current) {
+                  if (isPlaying) {
+                    videoRef.current.pause();
+                  } else {
+                    videoRef.current.play();
+                  }
+                }
+              }}
             >
               <source src="/videos/cosmora-video.mp4" type="video/mp4" />
               Seu navegador não suporta o elemento de vídeo.
@@ -112,10 +120,10 @@ const HeroSection = () => {
                   videoRef.current?.play();
                   setIsPlaying(true);
                 }}
-                className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-all group"
+                className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-all group cursor-pointer"
               >
-                <div className="w-20 h-20 flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 transition-all group-hover:scale-110">
-                  <Play className="w-10 h-10 text-white ml-1" fill="white" />
+                <div className="w-24 h-24 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-md border-2 border-white/40 hover:bg-white/30 transition-all group-hover:scale-110">
+                  <Play className="w-12 h-12 text-white ml-1" fill="white" />
                 </div>
               </button>
             )}
