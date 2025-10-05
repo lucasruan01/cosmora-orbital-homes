@@ -1,17 +1,20 @@
 import { Card } from '@/components/ui/card';
-import lab1 from '@/assets/lab-1.png';
-import lab2 from '@/assets/lab-2.png';
-import lab3 from '@/assets/lab-3.png';
-import lab4 from '@/assets/lab-4.png';
+import { useNavigate } from 'react-router-dom';
+import recyclingDrone from '@/assets/recycling-drone.png';
+import cosmoraGarden from '@/assets/cosmora-garden.png';
+import heliumGenerator from '@/assets/helium-generator.png';
+import customRoom from '@/assets/custom-room.png';
 
 const images = [
-  { src: lab1, alt: 'Laboratório de Pesquisa Cosmora' },
-  { src: lab2, alt: 'Vista da Terra do Módulo Principal' },
-  { src: lab3, alt: 'Centro de Ciências Avançadas' },
-  { src: lab4, alt: 'Equipe de Pesquisa em Ação' }
+  { src: recyclingDrone, alt: 'Recycling Drone', route: '/recycling-drone' },
+  { src: cosmoraGarden, alt: 'Cosmora Garden', route: '/cosmora-garden' },
+  { src: heliumGenerator, alt: 'Helium-3 Generator', route: '/helium-generator' },
+  { src: customRoom, alt: 'Custom Room', route: '/custom-room' }
 ];
 
 const GallerySection = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="galeria" className="py-32 bg-gradient-to-b from-muted/30 to-background">
       <div className="container mx-auto px-6">
@@ -29,6 +32,7 @@ const GallerySection = () => {
           {images.map((image, index) => (
             <Card
               key={index}
+              onClick={() => navigate(image.route)}
               className="p-2 rounded-3xl border-0 bg-gradient-to-br from-primary/5 to-purple-500/5 hover-lift overflow-hidden group cursor-pointer opacity-0 animate-slide-up"
               style={{
                 animationDelay: `${500 + index * 150}ms`,

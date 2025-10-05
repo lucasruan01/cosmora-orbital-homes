@@ -11,6 +11,10 @@ import ClimaPersonalizado from "./pages/ClimaPersonalizado";
 import NossaMissao from "./pages/NossaMissao";
 import Equipe from "./pages/Equipe";
 import Tecnologia from "./pages/Tecnologia";
+import RecyclingDrone from "./pages/RecyclingDrone";
+import CosmoraGarden from "./pages/CosmoraGarden";
+import HeliumGenerator from "./pages/HeliumGenerator";
+import CustomRoom from "./pages/CustomRoom";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +34,10 @@ const App = () => (
           <Route path="/nossa-missao" element={<NossaMissao />} />
           <Route path="/equipe" element={<Equipe />} />
           <Route path="/tecnologia" element={<Tecnologia />} />
+          <Route path="/recycling-drone" element={<RecyclingDrone />} />
+          <Route path="/cosmora-garden" element={<CosmoraGarden />} />
+          <Route path="/helium-generator" element={<HeliumGenerator />} />
+          <Route path="/custom-room" element={<CustomRoom />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
