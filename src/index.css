@@ -116,7 +116,8 @@ All colors MUST be HSL.
 
 @layer utilities {
   .text-gradient-cosmic {
-    @apply bg-gradient-to-r from-[hsl(221,83%,53%)] to-[hsl(250,70%,60%)] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[hsl(221,83%,53%)] to-[hsl(250,70%,60%)] bg-clip-text text-transparent leading-tight pb-2;
+    display: inline-block;
   }
   
   .hover-lift {
