@@ -8,12 +8,6 @@ import { useScrollToTop } from '@/hooks/useScrollToTop';
 const ExploreCosmora = () => {
   useScrollToTop();
 
-  const sources = [
-    { title: 'NASA - Space Habitats', url: 'https://www.nasa.gov' },
-    { title: 'NASA Technology', url: 'https://technology.nasa.gov' },
-    { title: 'NASA Techport', url: 'https://techport.nasa.gov' },
-    { title: 'Cosmora Habitat Video', url: 'https://www.youtube.com/watch?v=bVzppWSIFU0' },
-  ];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -112,8 +106,54 @@ const ExploreCosmora = () => {
                           className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
                         >
                           <Youtube className="w-5 h-5" />
-                          Cosmora Habitat Video
+                          Omniprocessor
                         </a>
+                      </div>
+                      
+                      <div className="mt-8 pt-6 border-t border-border/50">
+                        <h4 className="text-lg font-semibold mb-4 text-foreground">Fontes e Referências</h4>
+                        <ul className="space-y-2 text-sm text-muted-foreground">
+                          <li>
+                            <a 
+                              href="https://www.nasa.gov" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="hover:text-primary hover:underline transition-all"
+                            >
+                              NASA - Space Habitats
+                            </a>
+                          </li>
+                          <li>
+                            <a 
+                              href="https://technology.nasa.gov" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="hover:text-primary hover:underline transition-all"
+                            >
+                              NASA Technology
+                            </a>
+                          </li>
+                          <li>
+                            <a 
+                              href="https://techport.nasa.gov" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="hover:text-primary hover:underline transition-all"
+                            >
+                              NASA Techport
+                            </a>
+                          </li>
+                          <li>
+                            <a 
+                              href="https://www.youtube.com/watch?v=bVzppWSIFU0" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="hover:text-primary hover:underline transition-all"
+                            >
+                              Omniprocessor
+                            </a>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </CardContent>
@@ -124,7 +164,7 @@ const ExploreCosmora = () => {
         </div>
       </main>
       
-      <Footer sources={sources} />
+      <Footer />
     </div>
   );
 };
