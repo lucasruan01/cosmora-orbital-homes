@@ -1,5 +1,5 @@
 import { Card } from '@/components/ui/card';
-import { Home, Cpu, Leaf, Shield } from 'lucide-react';
+import { Home, Cpu, Leaf, FlaskConical } from 'lucide-react';
 
 const features = [
   {
@@ -24,9 +24,9 @@ const features = [
     bgColor: 'bg-green-500/10'
   },
   {
-    icon: Shield,
-    title: 'Segurança Total',
-    description: 'Proteção contra radiação, sistemas redundantes e equipe médica 24/7.',
+    icon: FlaskConical,
+    title: 'Trabalho e P&D',
+    description: 'Pesquisas e trabalhos que serão feitos em nossa estação.',
     gradient: 'from-orange-500 to-red-500',
     bgColor: 'bg-orange-500/10'
   }
