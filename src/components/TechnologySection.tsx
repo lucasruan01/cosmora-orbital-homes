@@ -24,7 +24,7 @@ const TechnologySection = () => {
                 <div className="space-y-3 p-4 rounded-2xl hover:bg-card/50 cursor-pointer apple-smooth group animate-fade-up opacity-0 [animation-delay:600ms] [animation-fill-mode:forwards]">
                   <h3 className="text-2xl font-semibold group-hover:text-primary apple-smooth">Gravidade Artificial</h3>
                   <p className="text-muted-foreground text-lg leading-relaxed">
-                    Sistema de rotação controlada que simula 0.9G, mantendo seu corpo saudável 
+                    Sistema de rotação controlada que simula 1G, mantendo seu corpo saudável 
                     e proporcionando conforto semelhante à Terra.
                   </p>
                 </div>

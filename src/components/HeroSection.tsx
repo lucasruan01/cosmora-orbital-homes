@@ -74,7 +74,7 @@ const HeroSection = () => {
             </div>
             <div className="hidden sm:block w-px h-4 bg-white/30" />
             <div className="hidden sm:flex items-center gap-2">
-              <span>Gravidade 0.9G</span>
+              <span>Gravidade 1G</span>
             </div>
           </div>
         </div>
