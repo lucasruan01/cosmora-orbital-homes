@@ -1,12 +1,15 @@
-import { Youtube } from 'lucide-react';
+import { Youtube, ArrowLeft } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent } from '@/components/ui/card';
 import { useScrollToTop } from '@/hooks/useScrollToTop';
+import { useNavigate } from 'react-router-dom';
 
 const ExploreCosmora = () => {
   useScrollToTop();
+  const navigate = useNavigate();
 
 
   return (
@@ -16,6 +19,15 @@ const ExploreCosmora = () => {
       <main className="flex-grow pt-24 pb-16">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
+            <Button
+              variant="ghost"
+              onClick={() => navigate(-1)}
+              className="mb-8 hover:bg-primary/10"
+            >
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Back
+            </Button>
+
             <h1 className="text-4xl md:text-5xl font-bold text-center mb-8">
               Explore Cosmora
             </h1>
