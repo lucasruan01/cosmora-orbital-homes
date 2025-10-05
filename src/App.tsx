@@ -11,6 +11,7 @@ import ClimaPersonalizado from "./pages/ClimaPersonalizado";
 import NossaMissao from "./pages/NossaMissao";
 import Equipe from "./pages/Equipe";
 import Tecnologia from "./pages/Tecnologia";
+import ExploreCosmora from "./pages/ExploreCosmora";
 import RecyclingDrone from "./pages/RecyclingDrone";
 import CosmoraGarden from "./pages/CosmoraGarden";
 import HeliumGenerator from "./pages/HeliumGenerator";
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/nossa-missao" element={<NossaMissao />} />
           <Route path="/equipe" element={<Equipe />} />
           <Route path="/tecnologia" element={<Tecnologia />} />
+          <Route path="/explore-cosmora" element={<ExploreCosmora />} />
           <Route path="/recycling-drone" element={<RecyclingDrone />} />
           <Route path="/cosmora-garden" element={<CosmoraGarden />} />
           <Route path="/helium-generator" element={<HeliumGenerator />} />

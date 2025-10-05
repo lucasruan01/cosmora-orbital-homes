@@ -1,7 +1,10 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
@@ -34,6 +37,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               className="rounded-full bg-primary hover:bg-primary/90 hover:scale-105 shadow-cosmic text-lg px-8 py-6 group apple-smooth"
+              onClick={() => navigate('/explore-cosmora')}
             >
               Explore Cosmora
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 apple-smooth" />
