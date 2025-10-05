@@ -97,13 +97,11 @@ const GravidadeArtificial = () => {
               <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Como funciona?</h2>
               <div className="space-y-4 text-lg leading-relaxed">
                 <p>
-                  Para manter o corpo humano saudável em longas viagens espaciais, a NASA estuda o uso de 
-                  <strong> gravidade artificial por rotação</strong> — um sistema que gira lentamente para simular 
-                  o peso que sentimos na Terra.
+                  Na Cosmora, desenvolvemos ambientes pensados para o corpo humano viver bem além da Terra.
+                  Por isso, nossas casas espaciais utilizam o princípio da gravidade artificial por rotação, inspirado em estudos da NASA.
                 </p>
                 <p>
-                  Essa rotação cria uma <strong>força centrífuga</strong>, parecida com a gravidade, permitindo que 
-                  os músculos e ossos continuem funcionando como em 0,9 g, ou 90% da gravidade terrestre.
+                  Ao girar lentamente, a estrutura cria uma força centrífuga que reproduz até 90% da gravidade terrestre (0,9 g), o suficiente para manter músculos e ossos ativos, garantindo conforto e saúde durante longas jornadas pelo espaço.
                 </p>
               </div>
             </Card>
@@ -115,17 +113,14 @@ const GravidadeArtificial = () => {
                 section2.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Estrutura e controle</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Estrutura e controle:</h2>
               <div className="space-y-4 text-lg leading-relaxed">
                 <p>
-                  A ideia é simples: imagine um <strong>anel giratório</strong> dentro da estação.
+                  Na Cosmora, transformamos conceitos complexos em soluções simples para a vida no espaço.
                 </p>
                 <p>
-                  Quando ele gira, o chão "empurra" os astronautas para fora, criando a sensação de peso.
-                </p>
-                <p>
-                  Motores ajustam a rotação para manter a aceleração constante, e sistemas de equilíbrio evitam 
-                  que a estação se desestabilize.
+                  Imagine um anel giratório dentro da estação: quando ele gira, o chão "empurra" os astronautas para fora, criando a sensação de peso.
+                  Motores controlam a rotação constante, enquanto sistemas de equilíbrio mantêm a estabilidade da estrutura, garantindo conforto e segurança em cada movimento.
                 </p>
               </div>
             </Card>
@@ -137,25 +132,24 @@ const GravidadeArtificial = () => {
                 section3.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Benefícios</h2>
-              <p className="text-lg mb-6">Com 0,9 g simulada:</p>
+              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Benefícios:</h2>
+              <p className="text-lg mb-6">Com 0,9 g simulada, nossas moradias espaciais mantêm o corpo em equilíbrio:</p>
               <ul className="space-y-3 text-lg">
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Os músculos e ossos continuam fortes;</span>
+                  <span>Músculos e ossos continuam fortes;</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>O fluxo sanguíneo se mantém equilibrado;</span>
+                  <span>O fluxo sanguíneo permanece estável;</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>A vida a bordo se torna mais próxima da Terra.</span>
+                  <span>A vida a bordo se torna mais próxima da experiência na Terra.</span>
                 </li>
               </ul>
               <p className="mt-6 text-lg leading-relaxed">
-                Esses efeitos foram observados em estudos de gravidade artificial com humanos e animais em 
-                simulações da NASA e da Agência Espacial Alemã (DLR).
+                Esses resultados se baseiam em estudos de gravidade artificial realizados com humanos e animais pela NASA e pela Agência Espacial Alemã (DLR), um passo essencial para tornar o espaço um lar possível.
               </p>
             </Card>
 
@@ -166,15 +160,14 @@ const GravidadeArtificial = () => {
                 section4.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Desafios</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Desafios:</h2>
               <div className="space-y-4 text-lg leading-relaxed">
                 <p>
-                  Criar esse sistema exige engenharia precisa: a rotação precisa ser suave para evitar tonturas, 
-                  e o módulo deve ter raio suficiente para reduzir efeitos como o "Coriolis" (aquela sensação estranha 
-                  ao se mover em algo girando).
+                  Na Cosmora, cada detalhe é pensado para unir conforto e precisão.
+                  A rotação deve ser suave, evitando tonturas, e o módulo precisa ter raio suficiente para reduzir efeitos como o Coriolis — aquela sensação incomum ao se mover dentro de algo em rotação.
                 </p>
                 <p>
-                  Ainda assim, é uma das soluções mais promissoras para futuras missões à Lua e Marte.
+                  Mesmo com desafios técnicos, essa é uma das soluções mais promissoras para tornar missões à Lua e a Marte mais seguras e sustentáveis
                 </p>
               </div>
             </Card>

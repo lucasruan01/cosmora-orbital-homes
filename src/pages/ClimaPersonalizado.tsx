@@ -109,7 +109,7 @@ const ClimaPersonalizado = () => {
               }`}
             >
               <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">
-                Como funciona (com respaldo nos conceitos da NASA)
+                Como funciona:
               </h2>
               
               <div className="space-y-8">
@@ -117,12 +117,7 @@ const ClimaPersonalizado = () => {
                 <div>
                   <h3 className="text-2xl font-semibold mb-4">Sistema integrado de suporte ambiental (ECLSS)</h3>
                   <p className="text-lg leading-relaxed mb-4">
-                    A Estação Espacial Internacional utiliza o <strong>Environmental Control and Life Support System (ECLSS)</strong>, 
-                    que regula temperatura, umidade e composição da atmosfera para manter conforto e segurança.
-                  </p>
-                  <p className="text-lg leading-relaxed">
-                    Na Cosmora, cada residência terá uma versão local desse conceito, adaptada para modular os parâmetros 
-                    conforme as necessidades individuais.
+                    Na Estação Espacial Internacional, o ECLSS cuida da temperatura, da umidade e do ar para manter todos confortáveis e seguros. Na Cosmora, levamos esse conceito para cada residência, ajustando o ambiente de acordo com as necessidades de quem está dentro.
                   </p>
                 </div>
 
@@ -130,9 +125,7 @@ const ClimaPersonalizado = () => {
                 <div>
                   <h3 className="text-2xl font-semibold mb-4">Sensores e IA em tempo real</h3>
                   <p className="text-lg leading-relaxed">
-                    Sensores internos medem temperatura, umidade, níveis de CO₂, vapor de água e outros gases. A inteligência 
-                    artificial interpreta essas medições e ativa ajustes automáticos (esfriamento, aquecimento, desumidificação, 
-                    renovação de ar) para manter o ambiente ideal.
+                    Sensores inteligentes medem temperatura, umidade, CO₂ e outros gases o tempo todo, enquanto nossa IA interpreta os dados e faz ajustes automáticos, seja para aquecer, esfriar, desumidificar ou renovar o ar, garantindo um clima sempre perfeito.
                   </p>
                 </div>
 
@@ -140,11 +133,7 @@ const ClimaPersonalizado = () => {
                 <div>
                   <h3 className="text-2xl font-semibold mb-4">Ciclagem e purificação do ar</h3>
                   <p className="text-lg leading-relaxed mb-4">
-                    Os sistemas de suporte vital da estação garantem renovação de oxigênio e remoção de CO₂, filtragem 
-                    (partículas e compostos orgânicos voláteis), e controle de umidade.
-                  </p>
-                  <p className="text-lg leading-relaxed">
-                    Em cada habitação, esse sistema opera de forma modular para atender os perfis individuais.
+                    O ar circula de forma constante, com oxigênio renovado, CO₂ removido e filtragem de partículas e compostos indesejados. Cada habitação funciona de forma modular, adaptando a purificação e a ciclagem do ar ao perfil de cada morador.
                   </p>
                 </div>
 
@@ -152,9 +141,7 @@ const ClimaPersonalizado = () => {
                 <div>
                   <h3 className="text-2xl font-semibold mb-4">Construção com materiais inteligentes</h3>
                   <p className="text-lg leading-relaxed">
-                    Paredes e dutos empregam materiais com isolação térmica avançada, além de membranas que ajudam no controle 
-                    da umidade e na transferência seletiva de gases. A NASA já patenteou conceitos que integram reciclagem de 
-                    ar e água nas paredes estruturais.
+                    As paredes e dutos usam materiais inteligentes com isolamento térmico avançado e membranas que controlam a umidade e ajudam na troca seletiva de gases. Alguns desses conceitos, já testados pela NASA, até permitem reciclar ar e água dentro da própria estrutura, tornando a vida no espaço mais segura, confortável e sustentável.
                   </p>
                 </div>
               </div>
@@ -167,23 +154,23 @@ const ClimaPersonalizado = () => {
                 section3.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Benefícios na prática</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Benefícios na prática:</h2>
               <ul className="space-y-3 text-lg">
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span><strong>Conforto sob medida:</strong> cada pessoa ajusta seu microclima ideal — não há "uma temperatura para todos".</span>
+                  <span><strong>Conforto feito para você:</strong> cada morador pode ajustar seu microclima ideal — nada de "uma temperatura para todos".</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span><strong>Saúde garantida:</strong> níveis ótimos de umidade e ar puro reduzem riscos de alergias, ressecamento ou desconfortos.</span>
+                  <span><strong>Saúde em primeiro lugar:</strong> ar puro e umidade na medida certa ajudam a reduzir alergias, ressecamento e qualquer desconforto.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span><strong>Eficiência energética:</strong> a IA evita desperdício, ajustando apenas o necessário para cada ambiente.</span>
+                  <span><strong>Energia usada com inteligência:</strong> nossa IA ajusta só o necessário, evitando desperdício e mantendo tudo eficiente.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span><strong>Experiência digna de estação do futuro:</strong> viver bem em órbita significa não só sobreviver, mas prosperar.</span>
+                  <span><strong>Viver como no futuro:</strong> morar no espaço não é só sobreviver, é prosperar em cada detalhe do seu dia a dia em órbita.</span>
                 </li>
               </ul>
             </Card>

@@ -94,11 +94,11 @@ const JanelasInteligentes = () => {
                 section1.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Visão Geral</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Visão Geral:</h2>
               <p className="text-lg leading-relaxed">
-                As janelas inteligentes da estação espacial combinam tecnologia e design para oferecer 
-                <strong> vistas panorâmicas seguras do espaço</strong>. Elas se ajustam automaticamente à luz solar, 
-                bloqueiam radiação UV e calor e garantem conforto visual em qualquer momento do dia.
+                As janelas inteligentes da Cosmora foram criadas para unir tecnologia, segurança e beleza em um só design.
+                Elas oferecem vistas panorâmicas do espaço e se ajustam automaticamente à luz solar, bloqueando radiação UV e calor.
+                O resultado é um ambiente sempre confortável e harmonioso, em qualquer momento do dia — com o universo inteiro ao alcance dos olhos.
               </p>
             </Card>
 
@@ -110,22 +110,22 @@ const JanelasInteligentes = () => {
               }`}
             >
               <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">
-                Como funcionam (baseado em pesquisas da NASA)
+                Como funcionam:
               </h2>
               
               <div className="space-y-8">
                 {/* 1. Vidros Eletrocrômicos */}
                 <div>
-                  <h3 className="text-2xl font-semibold mb-4">1. Vidros Eletrocrômicos</h3>
+                  <h3 className="text-2xl font-semibold mb-4">Vidros Eletrocrômicos</h3>
                   <p className="text-lg leading-relaxed">
                     Desenvolvidos em estudos da NASA, esses vidros mudam de transparência com uma leve carga elétrica, 
-                    escurecendo sob luz intensa e clareando quando necessário — como se "respirassem" com o ambiente.
+                    escurecendo sob luz intensa e clareando quando necessário, como se "respirassem" com o ambiente.
                   </p>
                 </div>
 
                 {/* 2. Filme Metálico Refletivo */}
                 <div>
-                  <h3 className="text-2xl font-semibold mb-4">2. Filme Metálico Refletivo "Nunsun"</h3>
+                  <h3 className="text-2xl font-semibold mb-4">Filme Metálico Refletivo "Nunsun"</h3>
                   <p className="text-lg leading-relaxed">
                     Criado pela NASA, o filme Nunsun reflete calor e brilho solar sem bloquear a vista. Aplicado sobre 
                     o vidro, ele protege contra radiação infravermelha e ultravioleta, mantendo o interior mais fresco.
@@ -134,7 +134,7 @@ const JanelasInteligentes = () => {
 
                 {/* 3. Materiais Estruturais */}
                 <div>
-                  <h3 className="text-2xl font-semibold mb-4">3. Materiais Estruturais Avançados</h3>
+                  <h3 className="text-2xl font-semibold mb-4">Materiais Estruturais Avançados</h3>
                   <p className="text-lg leading-relaxed">
                     As janelas utilizam camadas de acrílico e policarbonato (leves e resistentes) junto a vidros cerâmicos 
                     externos, formando um sistema multicamada capaz de resistir à pressão e até a micrometeoritos.
@@ -143,7 +143,7 @@ const JanelasInteligentes = () => {
 
                 {/* 4. Controle Adaptativo */}
                 <div>
-                  <h3 className="text-2xl font-semibold mb-4">4. Controle Adaptativo</h3>
+                  <h3 className="text-2xl font-semibold mb-4">Controle Adaptativo</h3>
                   <p className="text-lg leading-relaxed">
                     Sensores monitoram a luminosidade e aplicam ajustes automáticos de opacidade, equilibrando proteção 
                     e visibilidade em tempo real.
@@ -159,23 +159,23 @@ const JanelasInteligentes = () => {
                 section3.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Benefícios na Prática</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Benefícios na prática:</h2>
               <ul className="space-y-3 text-lg">
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Protege contra radiação UV e calor solar.</span>
+                  <span>Protege você da radiação UV e do calor do Sol.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Garante conforto visual, sem ofuscamento.</span>
+                  <span>Mantém o conforto visual, sem aquele ofuscamento incômodo.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Melhora a eficiência térmica da estação.</span>
+                  <span>Ajuda a manter a estação na temperatura ideal, economizando energia.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Oferece vistas seguras e realistas da Terra e do espaço.</span>
+                  <span>Permite vistas seguras e incríveis da Terra e do espaço, como se você estivesse flutuando lá fora.</span>
                 </li>
               </ul>
             </Card>

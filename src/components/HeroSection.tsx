@@ -22,7 +22,7 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-5xl mx-auto space-y-8">
           <h1 className="text-white font-bold tracking-tighter animate-text-reveal opacity-0 [animation-delay:200ms] [animation-fill-mode:forwards]">
-            Viva nas Estrelas
+            Cosmora
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light animate-fade-up opacity-0 [animation-delay:600ms] [animation-fill-mode:forwards]">
