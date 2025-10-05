@@ -86,7 +86,6 @@ const HeroSection = () => {
           </DialogClose>
           <video
             controls
-            autoPlay
             className="w-full h-auto rounded-lg"
           >
             <source src="/videos/cosmora-video.mp4" type="video/mp4" />
