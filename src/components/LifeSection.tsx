@@ -80,6 +80,13 @@ const LifeSection = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
 
+  const scrollToDetails = () => {
+    const detailsElement = document.getElementById('amenity-details');
+    if (detailsElement) {
+      detailsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setUser(session?.user ?? null);
@@ -131,7 +138,10 @@ const LifeSection = () => {
           {amenitiesData.map((amenity) => (
             <Card
               key={amenity.id}
-              onClick={() => setSelectedAmenity(amenity)}
+              onClick={() => {
+                setSelectedAmenity(amenity);
+                scrollToDetails();
+              }}
               className={`p-6 rounded-2xl border-2 backdrop-blur-sm hover-lift group cursor-pointer transition-all duration-300 ${
                 selectedAmenity.id === amenity.id 
                   ? 'border-primary bg-primary/10 scale-105 shadow-[0_0_30px_rgba(59,130,246,0.3)]' 
@@ -150,7 +160,7 @@ const LifeSection = () => {
         </div>
 
         {/* Detailed Content Section */}
-        <div className="mb-16">
+        <div id="amenity-details" className="mb-16 scroll-mt-32">
           <Card className="overflow-hidden rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30">
             <div className="grid md:grid-cols-2 gap-0">
               {/* Content Side */}

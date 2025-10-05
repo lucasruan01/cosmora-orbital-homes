@@ -10,6 +10,8 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 import { useState } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/hooks/use-toast';
 
 interface FooterProps {
   sources?: Array<{ title: string; url: string }>;
@@ -17,6 +19,49 @@ interface FooterProps {
 
 const Footer = ({ sources }: FooterProps) => {
   const [stakeholderEmail, setStakeholderEmail] = useState('');
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const { toast } = useToast();
+  
+  const handleNewsletterSubmit = async () => {
+    if (!newsletterEmail || !newsletterEmail.includes('@')) {
+      toast({
+        title: 'Email inválido',
+        description: 'Por favor, insira um email válido.',
+        variant: 'destructive',
+      });
+      return;
+    }
+
+    try {
+      const { error } = await supabase
+        .from('newsletter_subscribers')
+        .insert([{ email: newsletterEmail }]);
+
+      if (error) {
+        if (error.code === '23505') {
+          toast({
+            title: 'Email já cadastrado',
+            description: 'Este email já está inscrito na newsletter.',
+            variant: 'destructive',
+          });
+        } else {
+          throw error;
+        }
+      } else {
+        toast({
+          title: 'Inscrição realizada!',
+          description: 'Você receberá nossas novidades em breve.',
+        });
+        setNewsletterEmail('');
+      }
+    } catch (error) {
+      toast({
+        title: 'Erro',
+        description: 'Não foi possível completar a inscrição.',
+        variant: 'destructive',
+      });
+    }
+  };
   
   return (
     <footer className="bg-gradient-to-b from-background to-muted/30 border-t border-border/50">
@@ -128,10 +173,15 @@ const Footer = ({ sources }: FooterProps) => {
             <div className="flex gap-2">
               <Input 
                 type="email" 
-                placeholder="Seu e-mail" 
+                placeholder="Seu e-mail"
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
                 className="rounded-full border-border/50 focus:border-primary transition-colors"
               />
-              <Button className="rounded-full bg-primary hover:bg-primary/90 hover:scale-105 transition-all duration-300 shrink-0">
+              <Button 
+                onClick={handleNewsletterSubmit}
+                className="rounded-full bg-primary hover:bg-primary/90 hover:scale-105 transition-all duration-300 shrink-0"
+              >
                 Inscrever
               </Button>
             </div>

@@ -3,12 +3,13 @@ import Footer from '@/components/Footer';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Cpu } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useScrollToTop } from '@/hooks/useScrollToTop';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const Tecnologia = () => {
   useScrollToTop();
+  const navigate = useNavigate();
   
   const header = useScrollReveal();
   const section1 = useScrollReveal();
@@ -25,12 +26,14 @@ const Tecnologia = () => {
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-6 max-w-5xl">
           {/* Back Button */}
-          <Link to="/">
-            <Button variant="ghost" className="mb-8 group">
-              <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-              Voltar
-            </Button>
-          </Link>
+          <Button 
+            variant="ghost" 
+            className="mb-8 group"
+            onClick={() => navigate(-1)}
+          >
+            <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
+            Voltar
+          </Button>
 
           {/* Header */}
           <div 
