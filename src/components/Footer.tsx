@@ -1,12 +1,23 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
+import { useState } from 'react';
 
 interface FooterProps {
   sources?: Array<{ title: string; url: string }>;
 }
 
 const Footer = ({ sources }: FooterProps) => {
+  const [stakeholderEmail, setStakeholderEmail] = useState('');
+  
   return (
     <footer className="bg-gradient-to-b from-background to-muted/30 border-t border-border/50">
       <div className="container mx-auto px-6 py-16">
@@ -61,13 +72,41 @@ const Footer = ({ sources }: FooterProps) => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Residências</h3>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Módulos Studio</a></li>
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Módulos Deluxe</a></li>
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Módulos Penthouse</a></li>
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Plantas e Preços</a></li>
-            </ul>
+            <h3 className="font-semibold mb-4">Stakeholder</h3>
+            <Dialog>
+              <DialogTrigger asChild>
+                <button className="text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all inline-block text-left">
+                  Seja um Stakeholder
+                </button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md">
+                <DialogHeader>
+                  <DialogTitle>Seja um Stakeholder</DialogTitle>
+                  <DialogDescription>
+                    Deixe seu e-mail para receber informações exclusivas sobre investimento na Cosmora.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="flex flex-col gap-4 py-4">
+                  <Input 
+                    type="email" 
+                    placeholder="seu@email.com" 
+                    value={stakeholderEmail}
+                    onChange={(e) => setStakeholderEmail(e.target.value)}
+                    className="rounded-full"
+                  />
+                  <Button 
+                    className="rounded-full bg-primary hover:bg-primary/90"
+                    onClick={() => {
+                      // Handle stakeholder email submission
+                      console.log('Stakeholder email:', stakeholderEmail);
+                      setStakeholderEmail('');
+                    }}
+                  >
+                    Enviar
+                  </Button>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
 
           <div>
