@@ -152,10 +152,10 @@ const LifeSection = () => {
                   key={selectedAmenity.id}
                   src={selectedAmenity.image} 
                   alt={selectedAmenity.title}
-                  className="w-full h-full object-cover transition-opacity duration-300"
+                  className="w-full h-full object-cover animate-fade-in"
                   loading="eager"
-                  style={{ imageRendering: 'auto' }}
-                  data-lov-id="src/components/LifeSection.tsx:142:16"
+                  onLoad={(e) => e.currentTarget.style.opacity = '1'}
+                  style={{ opacity: 0, transition: 'opacity 0.2s ease-in-out' }}
                 />
               </div>
             </div>

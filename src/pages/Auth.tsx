@@ -1,79 +1,82 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
-import { supabase } from '@/integrations/supabase/client';
-import { toast } from 'sonner';
-import { Loader2 } from 'lucide-react';
-import { z } from 'zod';
-
-const signUpSchema = z.object({
-  fullName: z.string().min(2, 'Nome deve ter pelo menos 2 caracteres').max(100, 'Nome muito longo'),
-  email: z.string().email('Email inválido').max(255, 'Email muito longo'),
-  password: z.string().min(6, 'Senha deve ter pelo menos 6 caracteres').max(100, 'Senha muito longa'),
-});
-
-const loginSchema = z.object({
-  email: z.string().email('Email inválido').max(255, 'Email muito longo'),
-  password: z.string().min(1, 'Senha é obrigatória'),
-});
+import { useToast } from '@/hooks/use-toast';
+import { ArrowLeft, Rocket } from 'lucide-react';
+import { User, Session } from '@supabase/supabase-js';
 
 const Auth = () => {
-  const navigate = useNavigate();
-  const [isLogin, setIsLogin] = useState(true);
-  const [loading, setLoading] = useState(false);
-  const [fullName, setFullName] = useState('');
+  const [searchParams] = useSearchParams();
+  const initialMode = searchParams.get('mode') === 'signup' ? 'signup' : 'login';
+  const [mode, setMode] = useState<'login' | 'signup'>(initialMode);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [fullName, setFullName] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [user, setUser] = useState<User | null>(null);
+  const [session, setSession] = useState<Session | null>(null);
+  const navigate = useNavigate();
+  const { toast } = useToast();
 
   useEffect(() => {
-    // Check if user is already logged in
-    const checkUser = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (session) {
+    // Set up auth state listener FIRST
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (event, session) => {
+        setSession(session);
+        setUser(session?.user ?? null);
+        
+        // Redirect authenticated users to home
+        if (session?.user) {
+          navigate('/');
+        }
+      }
+    );
+
+    // THEN check for existing session
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+      setUser(session?.user ?? null);
+      
+      if (session?.user) {
         navigate('/');
       }
-    };
-    checkUser();
+    });
+
+    return () => subscription.unsubscribe();
   }, [navigate]);
 
   const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    try {
-      const validatedData = signUpSchema.parse({ fullName, email, password });
-      setLoading(true);
+    setLoading(true);
 
+    try {
       const { error } = await supabase.auth.signUp({
-        email: validatedData.email,
-        password: validatedData.password,
+        email,
+        password,
         options: {
           emailRedirectTo: `${window.location.origin}/`,
           data: {
-            full_name: validatedData.fullName,
-          }
-        }
+            full_name: fullName,
+          },
+        },
       });
 
-      if (error) {
-        if (error.message.includes('already registered')) {
-          toast.error('Este email já está cadastrado. Faça login.');
-        } else {
-          toast.error(error.message);
-        }
-        return;
-      }
+      if (error) throw error;
 
-      toast.success('Conta criada com sucesso! Redirecionando...');
-      setTimeout(() => navigate('/'), 1500);
-    } catch (error) {
-      if (error instanceof z.ZodError) {
-        toast.error(error.errors[0].message);
-      } else {
-        toast.error('Erro ao criar conta');
-      }
+      toast({
+        title: 'Conta criada com sucesso!',
+        description: 'Bem-vindo à Cosmora.',
+      });
+    } catch (error: any) {
+      toast({
+        title: 'Erro ao criar conta',
+        description: error.message,
+        variant: 'destructive',
+      });
     } finally {
       setLoading(false);
     }
@@ -81,64 +84,71 @@ const Auth = () => {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    try {
-      const validatedData = loginSchema.parse({ email, password });
-      setLoading(true);
+    setLoading(true);
 
+    try {
       const { error } = await supabase.auth.signInWithPassword({
-        email: validatedData.email,
-        password: validatedData.password,
+        email,
+        password,
       });
 
-      if (error) {
-        if (error.message.includes('Invalid login credentials')) {
-          toast.error('Email ou senha incorretos');
-        } else {
-          toast.error(error.message);
-        }
-        return;
-      }
+      if (error) throw error;
 
-      toast.success('Login realizado com sucesso!');
-      navigate('/');
-    } catch (error) {
-      if (error instanceof z.ZodError) {
-        toast.error(error.errors[0].message);
-      } else {
-        toast.error('Erro ao fazer login');
-      }
+      toast({
+        title: 'Login realizado!',
+        description: 'Bem-vindo de volta.',
+      });
+    } catch (error: any) {
+      toast({
+        title: 'Erro no login',
+        description: error.message,
+        variant: 'destructive',
+      });
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-background to-muted/30 p-6">
-      <Card className="w-full max-w-md p-8 rounded-3xl border-0 bg-card shadow-cosmic">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gradient-cosmic mb-2">
-            {isLogin ? 'Login' : 'Sign Up'}
+    <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/30 flex items-center justify-center px-6 py-12">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgxNDgsIDE2MywgMTg0LCAwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-50" />
+      
+      <Card className="relative max-w-md w-full p-8 rounded-3xl border-0 bg-card shadow-2xl">
+        <Button
+          variant="ghost"
+          onClick={() => navigate('/')}
+          className="absolute top-4 left-4 rounded-full"
+        >
+          <ArrowLeft className="h-4 w-4 mr-2" />
+          Voltar
+        </Button>
+
+        <div className="text-center mb-8 mt-8">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-purple-500 flex items-center justify-center mx-auto mb-4">
+            <Rocket className="w-8 h-8 text-white" />
+          </div>
+          <h1 className="text-3xl font-bold mb-2">
+            {mode === 'login' ? 'Bem-vindo de volta' : 'Junte-se à Cosmora'}
           </h1>
           <p className="text-muted-foreground">
-            {isLogin ? 'Entre na sua conta Cosmora' : 'Crie sua conta Cosmora'}
+            {mode === 'login'
+              ? 'Faça login para acessar sua conta'
+              : 'Crie sua conta e comece sua jornada'}
           </p>
         </div>
 
-        <form onSubmit={isLogin ? handleLogin : handleSignUp} className="space-y-4">
-          {!isLogin && (
+        <form onSubmit={mode === 'login' ? handleLogin : handleSignUp} className="space-y-4">
+          {mode === 'signup' && (
             <div className="space-y-2">
               <Label htmlFor="fullName">Nome Completo</Label>
               <Input
                 id="fullName"
                 type="text"
-                placeholder="Seu nome"
+                placeholder="Seu nome completo"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
                 required
-                disabled={loading}
-                className="rounded-xl"
-                maxLength={100}
+                className="rounded-full"
               />
             </div>
           )}
@@ -152,9 +162,7 @@ const Auth = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              disabled={loading}
-              className="rounded-xl"
-              maxLength={255}
+              className="rounded-full"
             />
           </div>
 
@@ -167,35 +175,36 @@ const Auth = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              disabled={loading}
-              className="rounded-xl"
-              maxLength={100}
+              minLength={6}
+              className="rounded-full"
             />
           </div>
 
           <Button
             type="submit"
-            className="w-full rounded-full bg-primary hover:bg-primary/90 text-white py-6 text-lg"
             disabled={loading}
+            className="w-full rounded-full bg-primary hover:bg-primary/90 text-lg py-6 mt-6"
           >
-            {loading ? (
-              <>
-                <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                Processando...
-              </>
-            ) : (
-              isLogin ? 'Entrar' : 'Criar Conta'
-            )}
+            {loading ? 'Processando...' : mode === 'login' ? 'Entrar' : 'Criar Conta'}
           </Button>
         </form>
 
         <div className="mt-6 text-center">
           <button
-            onClick={() => setIsLogin(!isLogin)}
-            className="text-primary hover:underline"
-            disabled={loading}
+            onClick={() => setMode(mode === 'login' ? 'signup' : 'login')}
+            className="text-sm text-muted-foreground hover:text-primary transition-colors"
           >
-            {isLogin ? 'Não tem conta? Cadastre-se' : 'Já tem conta? Faça login'}
+            {mode === 'login' ? (
+              <>
+                Não tem uma conta?{' '}
+                <span className="text-primary font-medium">Cadastre-se</span>
+              </>
+            ) : (
+              <>
+                Já tem uma conta?{' '}
+                <span className="text-primary font-medium">Faça login</span>
+              </>
+            )}
           </button>
         </div>
       </Card>
