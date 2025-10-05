@@ -120,11 +120,25 @@ All colors MUST be HSL.
   }
   
   .hover-lift {
-    @apply transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_60px_-10px_hsl(221_83%_53%_/_0.3)];
+    transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .hover-lift:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 60px -10px hsl(221 83% 53% / 0.3);
   }
   
   .smooth-scroll {
     scroll-behavior: smooth;
+  }
+
+  .apple-smooth {
+    transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .parallax-slow {
+    transform: translateZ(0);
+    will-change: transform;
   }
 }
 

@@ -20,36 +20,36 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
-        <div className="max-w-5xl mx-auto space-y-8 animate-fade-in">
-          <h1 className="text-white font-bold tracking-tighter">
+        <div className="max-w-5xl mx-auto space-y-8">
+          <h1 className="text-white font-bold tracking-tighter animate-text-reveal opacity-0 [animation-delay:200ms] [animation-fill-mode:forwards]">
             Viva nas Estrelas
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light animate-fade-up opacity-0 [animation-delay:600ms] [animation-fill-mode:forwards]">
             Descubra uma nova dimensão da vida. Cosmora é a primeira estação espacial 
             residencial de luxo, onde tecnologia encontra conforto a 400km de altitude.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 animate-fade-up opacity-0 [animation-delay:1000ms] [animation-fill-mode:forwards]">
             <Button 
               size="lg" 
-              className="rounded-full bg-primary hover:bg-primary/90 hover:scale-105 shadow-cosmic text-lg px-8 py-6 group transition-all duration-300"
+              className="rounded-full bg-primary hover:bg-primary/90 hover:scale-105 shadow-cosmic text-lg px-8 py-6 group apple-smooth"
             >
               Explore Cosmora
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 apple-smooth" />
             </Button>
             
             <Button 
               size="lg" 
               variant="outline" 
-              className="rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:scale-105 text-white text-lg px-8 py-6 group transition-all duration-300"
+              className="rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:scale-105 text-white text-lg px-8 py-6 group apple-smooth"
             >
-              <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+              <Play className="mr-2 h-5 w-5 group-hover:scale-110 apple-smooth" />
               Assista ao Vídeo
             </Button>
           </div>
 
-          <div className="pt-12 flex items-center justify-center gap-8 text-white/80 text-sm">
+          <div className="pt-12 flex items-center justify-center gap-8 text-white/80 text-sm animate-fade-in opacity-0 [animation-delay:1400ms] [animation-fill-mode:forwards]">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
               <span>Lançamento 2026</span>
