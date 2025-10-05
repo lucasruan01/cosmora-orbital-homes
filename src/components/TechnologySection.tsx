@@ -1,6 +1,7 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import lab1 from '@/assets/lab-1.png';
 
 const TechnologySection = () => {
@@ -19,29 +20,35 @@ const TechnologySection = () => {
             </h2>
             
             <div className="space-y-6">
-              <div className="space-y-3 p-4 rounded-2xl hover:bg-card/50 cursor-pointer transition-all duration-300 group">
-                <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors">Gravidade Artificial</h3>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  Sistema de rotação controlada que simula 0.9G, mantendo seu corpo saudável 
-                  e proporcionando conforto semelhante à Terra.
-                </p>
-              </div>
+              <Link to="/gravidade-artificial">
+                <div className="space-y-3 p-4 rounded-2xl hover:bg-card/50 cursor-pointer transition-all duration-300 group">
+                  <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors">Gravidade Artificial</h3>
+                  <p className="text-muted-foreground text-lg leading-relaxed">
+                    Sistema de rotação controlada que simula 0.9G, mantendo seu corpo saudável 
+                    e proporcionando conforto semelhante à Terra.
+                  </p>
+                </div>
+              </Link>
 
-              <div className="space-y-3 p-4 rounded-2xl hover:bg-card/50 cursor-pointer transition-all duration-300 group">
-                <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors">Janelas Inteligentes</h3>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  Vidros com proteção UV adaptativa e controle de opacidade, permitindo 
-                  vistas deslumbrantes com total segurança.
-                </p>
-              </div>
+              <Link to="/janelas-inteligentes">
+                <div className="space-y-3 p-4 rounded-2xl hover:bg-card/50 cursor-pointer transition-all duration-300 group">
+                  <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors">Janelas Inteligentes</h3>
+                  <p className="text-muted-foreground text-lg leading-relaxed">
+                    Vidros com proteção UV adaptativa e controle de opacidade, permitindo 
+                    vistas deslumbrantes com total segurança.
+                  </p>
+                </div>
+              </Link>
 
-              <div className="space-y-3 p-4 rounded-2xl hover:bg-card/50 cursor-pointer transition-all duration-300 group">
-                <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors">Clima Personalizado</h3>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  Controle individual de temperatura, umidade e composição do ar em cada 
-                  residência, otimizado por IA.
-                </p>
-              </div>
+              <Link to="/clima-personalizado">
+                <div className="space-y-3 p-4 rounded-2xl hover:bg-card/50 cursor-pointer transition-all duration-300 group">
+                  <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors">Clima Personalizado</h3>
+                  <p className="text-muted-foreground text-lg leading-relaxed">
+                    Controle individual de temperatura, umidade e composição do ar em cada 
+                    residência, otimizado por IA.
+                  </p>
+                </div>
+              </Link>
             </div>
           </div>
 

@@ -2,7 +2,11 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
 
-const Footer = () => {
+interface FooterProps {
+  sources?: Array<{ title: string; url: string }>;
+}
+
+const Footer = ({ sources }: FooterProps) => {
   return (
     <footer className="bg-gradient-to-b from-background to-muted/30 border-t border-border/50">
       <div className="container mx-auto px-6 py-16">
@@ -94,6 +98,26 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
+        {sources && sources.length > 0 && (
+          <div className="pt-8 border-t border-border/50 mb-8">
+            <h3 className="font-semibold mb-4 text-sm">Fontes e Referências</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              {sources.map((source, index) => (
+                <li key={index}>
+                  <a 
+                    href={source.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-primary hover:underline transition-all"
+                  >
+                    {source.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p>© 2026 Cosmora. Todos os direitos reservados.</p>

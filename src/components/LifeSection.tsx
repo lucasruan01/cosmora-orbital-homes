@@ -2,11 +2,16 @@ import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Dumbbell, Utensils, Briefcase, Heart, ArrowRight } from 'lucide-react';
+import fitnessImage from '@/assets/fitness-zerog.png';
+import gastronomiaImage from '@/assets/gastronomia-orbital.png';
+import workspaceImage from '@/assets/workspace-orbital.png';
+import medicoImage from '@/assets/centro-medico.png';
 
 const amenitiesData = [
   {
     id: 'fitness',
     icon: Dumbbell,
+    image: fitnessImage,
     title: 'Fitness Zero-G',
     description: 'Academia com equipamentos adaptados para gravidade artificial',
     subtitle: 'Mantenha-se em forma no espaço',
@@ -21,6 +26,7 @@ const amenitiesData = [
   {
     id: 'gastronomy',
     icon: Utensils,
+    image: gastronomiaImage,
     title: 'Gastronomia Orbital',
     description: 'Restaurantes estrelados com chefs especializados em culinária espacial',
     subtitle: 'Sabores que desafiam a gravidade',
@@ -35,6 +41,7 @@ const amenitiesData = [
   {
     id: 'workspace',
     icon: Briefcase,
+    image: workspaceImage,
     title: 'Espaços de Trabalho',
     description: 'Escritórios com a melhor vista do universo',
     subtitle: 'Produtividade elevada ao próximo nível',
@@ -49,6 +56,7 @@ const amenitiesData = [
   {
     id: 'medical',
     icon: Heart,
+    image: medicoImage,
     title: 'Centro Médico',
     description: 'Atendimento médico 24/7 com tecnologia de ponta',
     subtitle: 'Sua saúde é nossa prioridade',
@@ -138,14 +146,14 @@ const LifeSection = () => {
               </div>
 
               {/* Visual Side */}
-              <div className="relative bg-gradient-to-br from-primary/20 to-purple-500/20 p-12 flex items-center justify-center min-h-[500px]">
+              <div className="relative bg-gradient-to-br from-primary/20 to-purple-500/20 overflow-hidden min-h-[500px]">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(221,83%,53%,0.2),transparent_70%)]" />
-                <div className="relative z-10 text-center animate-fade-in">
-                  <selectedAmenity.icon className="w-48 h-48 text-primary/30 mx-auto mb-6 animate-pulse" />
-                  <p className="text-lg font-medium text-muted-foreground">
-                    {selectedAmenity.title}
-                  </p>
-                </div>
+                <img 
+                  src={selectedAmenity.image} 
+                  alt={selectedAmenity.title}
+                  className="w-full h-full object-cover animate-fade-in"
+                  data-lov-id="src/components/LifeSection.tsx:142:16"
+                />
               </div>
             </div>
           </Card>
