@@ -1,7 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Dumbbell, Utensils, Briefcase, Heart, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/hooks/use-toast';
+import { User } from '@supabase/supabase-js';
 import fitnessImage from '@/assets/fitness-zerog.png';
 import gastronomiaImage from '@/assets/gastronomia-orbital.png';
 import workspaceImage from '@/assets/workspace-orbital.png';
@@ -72,6 +76,40 @@ const amenitiesData = [
 
 const LifeSection = () => {
   const [selectedAmenity, setSelectedAmenity] = useState(amenitiesData[0]);
+  const [user, setUser] = useState<User | null>(null);
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setUser(session?.user ?? null);
+    });
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (event, session) => {
+        setUser(session?.user ?? null);
+      }
+    );
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const handleTestClick = () => {
+    if (!user) {
+      toast({
+        title: 'Autenticação necessária',
+        description: 'Antes crie uma conta ou entre numa existente.',
+        variant: 'destructive',
+      });
+      navigate('/auth?mode=signup');
+    } else {
+      // Aqui você pode adicionar a lógica do teste de perfil
+      toast({
+        title: 'Em breve!',
+        description: 'O teste de perfil estará disponível em breve.',
+      });
+    }
+  };
 
   return (
     <section id="vida" className="py-32 bg-background relative overflow-hidden">
@@ -173,6 +211,7 @@ const LifeSection = () => {
           </p>
           <Button 
             size="lg" 
+            onClick={handleTestClick}
             className="rounded-full bg-primary hover:bg-primary/90 hover:scale-105 shadow-cosmic text-lg px-10 py-6 transition-all duration-300"
           >
             Faça o Teste de Perfil

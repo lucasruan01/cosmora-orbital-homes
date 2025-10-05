@@ -1,14 +1,21 @@
+import { useEffect, useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Gauge } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useScrollToTop } from '@/hooks/useScrollToTop';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/hooks/use-toast';
+import { User } from '@supabase/supabase-js';
 
 const GravidadeArtificial = () => {
   useScrollToTop();
+  const [user, setUser] = useState<User | null>(null);
+  const navigate = useNavigate();
+  const { toast } = useToast();
   
   const header = useScrollReveal();
   const section1 = useScrollReveal();
@@ -16,6 +23,36 @@ const GravidadeArtificial = () => {
   const section3 = useScrollReveal();
   const section4 = useScrollReveal();
   const cta = useScrollReveal();
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setUser(session?.user ?? null);
+    });
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (event, session) => {
+        setUser(session?.user ?? null);
+      }
+    );
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const handleTestClick = () => {
+    if (!user) {
+      toast({
+        title: 'Autenticação necessária',
+        description: 'Antes crie uma conta ou entre numa existente.',
+        variant: 'destructive',
+      });
+      navigate('/auth?mode=signup');
+    } else {
+      toast({
+        title: 'Em breve!',
+        description: 'O teste de perfil estará disponível em breve.',
+      });
+    }
+  };
   return (
     <div className="min-h-screen smooth-scroll bg-background">
       <Navigation />
@@ -157,7 +194,8 @@ const GravidadeArtificial = () => {
               Agende uma visita virtual e sinta como é viver com conforto gravitacional em órbita.
             </p>
             <Button 
-              size="lg" 
+              size="lg"
+              onClick={handleTestClick}
               className="rounded-full bg-primary hover:bg-primary/90 hover:scale-105 shadow-cosmic text-lg px-10 py-6 transition-all duration-300"
             >
               Faça o Teste de Perfil

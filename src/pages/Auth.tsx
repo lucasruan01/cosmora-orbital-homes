@@ -8,11 +8,11 @@ import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { ArrowLeft, Rocket } from 'lucide-react';
 import { User, Session } from '@supabase/supabase-js';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const Auth = () => {
   const [searchParams] = useSearchParams();
   const initialMode = searchParams.get('mode') === 'signup' ? 'signup' : 'login';
-  const [mode, setMode] = useState<'login' | 'signup'>(initialMode);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [fullName, setFullName] = useState('');
@@ -128,85 +128,110 @@ const Auth = () => {
             <Rocket className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-3xl font-bold mb-2">
-            {mode === 'login' ? 'Bem-vindo de volta' : 'Junte-se à Cosmora'}
+            Bem-vindo à Cosmora
           </h1>
           <p className="text-muted-foreground">
-            {mode === 'login'
-              ? 'Faça login para acessar sua conta'
-              : 'Crie sua conta e comece sua jornada'}
+            Escolha uma opção abaixo
           </p>
         </div>
 
-        <form onSubmit={mode === 'login' ? handleLogin : handleSignUp} className="space-y-4">
-          {mode === 'signup' && (
-            <div className="space-y-2">
-              <Label htmlFor="fullName">Nome Completo</Label>
-              <Input
-                id="fullName"
-                type="text"
-                placeholder="Seu nome completo"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-                required
-                className="rounded-full"
-              />
-            </div>
-          )}
+        <Tabs defaultValue={initialMode} className="w-full">
+          <TabsList className="grid w-full grid-cols-2 mb-6">
+            <TabsTrigger value="login">Login</TabsTrigger>
+            <TabsTrigger value="signup">Cadastro</TabsTrigger>
+          </TabsList>
+          
+          <TabsContent value="login">
+            <form onSubmit={handleLogin} className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="login-email">Email</Label>
+                <Input
+                  id="login-email"
+                  type="email"
+                  placeholder="seu@email.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="rounded-full"
+                />
+              </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
-            <Input
-              id="email"
-              type="email"
-              placeholder="seu@email.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="rounded-full"
-            />
-          </div>
+              <div className="space-y-2">
+                <Label htmlFor="login-password">Senha</Label>
+                <Input
+                  id="login-password"
+                  type="password"
+                  placeholder="••••••••"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                  minLength={6}
+                  className="rounded-full"
+                />
+              </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="password">Senha</Label>
-            <Input
-              id="password"
-              type="password"
-              placeholder="••••••••"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              minLength={6}
-              className="rounded-full"
-            />
-          </div>
+              <Button
+                type="submit"
+                disabled={loading}
+                className="w-full rounded-full bg-primary hover:bg-primary/90 text-lg py-6 mt-6"
+              >
+                {loading ? 'Processando...' : 'Entrar'}
+              </Button>
+            </form>
+          </TabsContent>
 
-          <Button
-            type="submit"
-            disabled={loading}
-            className="w-full rounded-full bg-primary hover:bg-primary/90 text-lg py-6 mt-6"
-          >
-            {loading ? 'Processando...' : mode === 'login' ? 'Entrar' : 'Criar Conta'}
-          </Button>
-        </form>
+          <TabsContent value="signup">
+            <form onSubmit={handleSignUp} className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="signup-name">Nome Completo</Label>
+                <Input
+                  id="signup-name"
+                  type="text"
+                  placeholder="Seu nome completo"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                  required
+                  className="rounded-full"
+                />
+              </div>
 
-        <div className="mt-6 text-center">
-          <button
-            onClick={() => setMode(mode === 'login' ? 'signup' : 'login')}
-            className="text-sm text-muted-foreground hover:text-primary transition-colors"
-          >
-            {mode === 'login' ? (
-              <>
-                Não tem uma conta?{' '}
-                <span className="text-primary font-medium">Cadastre-se</span>
-              </>
-            ) : (
-              <>
-                Já tem uma conta?{' '}
-                <span className="text-primary font-medium">Faça login</span>
-              </>
-            )}
-          </button>
-        </div>
+              <div className="space-y-2">
+                <Label htmlFor="signup-email">Email</Label>
+                <Input
+                  id="signup-email"
+                  type="email"
+                  placeholder="seu@email.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="rounded-full"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="signup-password">Senha</Label>
+                <Input
+                  id="signup-password"
+                  type="password"
+                  placeholder="••••••••"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                  minLength={6}
+                  className="rounded-full"
+                />
+              </div>
+
+              <Button
+                type="submit"
+                disabled={loading}
+                className="w-full rounded-full bg-primary hover:bg-primary/90 text-lg py-6 mt-6"
+              >
+                {loading ? 'Processando...' : 'Criar Conta'}
+              </Button>
+            </form>
+          </TabsContent>
+        </Tabs>
       </Card>
     </div>
   );
