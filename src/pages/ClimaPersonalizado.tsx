@@ -4,8 +4,17 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Thermometer } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useScrollToTop } from '@/hooks/useScrollToTop';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const ClimaPersonalizado = () => {
+  useScrollToTop();
+  
+  const header = useScrollReveal();
+  const section1 = useScrollReveal();
+  const section2 = useScrollReveal();
+  const section3 = useScrollReveal();
+  const cta = useScrollReveal();
   return (
     <div className="min-h-screen smooth-scroll bg-background">
       <Navigation />
@@ -21,7 +30,12 @@ const ClimaPersonalizado = () => {
           </Link>
 
           {/* Header */}
-          <div className="text-center mb-16">
+          <div 
+            ref={header.ref}
+            className={`text-center mb-16 transition-all duration-1000 ${
+              header.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary to-purple-500 flex items-center justify-center mx-auto mb-6">
               <Thermometer className="w-10 h-10 text-white" />
             </div>
@@ -36,7 +50,12 @@ const ClimaPersonalizado = () => {
           {/* Content Sections */}
           <div className="space-y-12">
             {/* Visão Geral */}
-            <Card className="p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30">
+            <Card 
+              ref={section1.ref}
+              className={`p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 transition-all duration-1000 ${
+                section1.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            >
               <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Visão Geral</h2>
               <p className="text-lg leading-relaxed">
                 Na Cosmora, priorizamos o bem-estar de cada habitante. Por isso, nossas acomodações terão 
@@ -46,7 +65,12 @@ const ClimaPersonalizado = () => {
             </Card>
 
             {/* Como funciona */}
-            <Card className="p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30">
+            <Card 
+              ref={section2.ref}
+              className={`p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 transition-all duration-1000 ${
+                section2.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            >
               <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">
                 Como funciona (com respaldo nos conceitos da NASA)
               </h2>
@@ -100,7 +124,12 @@ const ClimaPersonalizado = () => {
             </Card>
 
             {/* Benefícios */}
-            <Card className="p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30">
+            <Card 
+              ref={section3.ref}
+              className={`p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 transition-all duration-1000 ${
+                section3.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            >
               <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Benefícios na prática</h2>
               <ul className="space-y-3 text-lg">
                 <li className="flex items-start gap-3">
@@ -124,7 +153,12 @@ const ClimaPersonalizado = () => {
           </div>
 
           {/* CTA */}
-          <Card className="mt-16 p-12 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 text-center">
+          <Card 
+            ref={cta.ref}
+            className={`mt-16 p-12 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 text-center transition-all duration-1000 ${
+              cta.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             <h3 className="text-3xl font-semibold mb-4">
               Seu Conforto, Sua Atmosfera
             </h3>
