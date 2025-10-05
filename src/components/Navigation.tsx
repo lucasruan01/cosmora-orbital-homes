@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { supabase } from '@/integrations/supabase/client';
 import cosmoraLogo from '@/assets/cosmora-logo.png';
@@ -7,8 +7,10 @@ import { User } from 'lucide-react';
 
 const Navigation = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [user, setUser] = useState<any>(null);
+  const isSolid = scrolled || location.pathname !== '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,7 +43,7 @@ const Navigation = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
+        isSolid
           ? 'bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-sm'
           : 'bg-transparent'
       }`}
@@ -53,27 +55,27 @@ const Navigation = () => {
               <img 
                 src={cosmoraLogo} 
                 alt="Cosmora" 
-                className={`h-20 w-auto transition-all duration-300 group-hover:scale-110 ${scrolled ? 'brightness-0' : 'brightness-100'}`}
+                className={`h-20 w-auto transition-all duration-300 group-hover:scale-110 ${isSolid ? 'brightness-0' : 'brightness-100'}`}
               />
             </a>
             
             <div className="hidden md:flex items-center gap-8">
-              <a href="#residencias" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-muted-foreground' : 'text-white'}`}>
+              <a href="#residencias" className={`text-sm font-medium hover:text-primary transition-colors ${isSolid ? 'text-muted-foreground' : 'text-white'}`}>
                 Residences
               </a>
-              <Link to="/tecnologia" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-muted-foreground' : 'text-white'}`}>
+              <Link to="/tecnologia" className={`text-sm font-medium hover:text-primary transition-colors ${isSolid ? 'text-muted-foreground' : 'text-white'}`}>
                 Technology
               </Link>
-              <a href="#vida" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-muted-foreground' : 'text-white'}`}>
+              <a href="#vida" className={`text-sm font-medium hover:text-primary transition-colors ${isSolid ? 'text-muted-foreground' : 'text-white'}`}>
                 Life in Space
               </a>
-              <Link to="/nossa-missao" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-muted-foreground' : 'text-white'}`}>
+              <Link to="/nossa-missao" className={`text-sm font-medium hover:text-primary transition-colors ${isSolid ? 'text-muted-foreground' : 'text-white'}`}>
                 Our Mission
               </Link>
-              <Link to="/equipe" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-muted-foreground' : 'text-white'}`}>
+              <Link to="/equipe" className={`text-sm font-medium hover:text-primary transition-colors ${isSolid ? 'text-muted-foreground' : 'text-white'}`}>
                 Team
               </Link>
-              <a href="#galeria" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-muted-foreground' : 'text-white'}`}>
+              <a href="#galeria" className={`text-sm font-medium hover:text-primary transition-colors ${isSolid ? 'text-muted-foreground' : 'text-white'}`}>
                 Gallery
               </a>
             </div>
@@ -84,7 +86,7 @@ const Navigation = () => {
               <>
                 <Button 
                   variant="ghost" 
-                  className={`hidden md:inline-flex rounded-full hover:bg-secondary/50 ${scrolled ? 'text-muted-foreground' : 'text-white'}`}
+                  className={`hidden md:inline-flex rounded-full hover:bg-secondary/50 ${isSolid ? 'text-muted-foreground' : 'text-white'}`}
                 >
                   <User className="h-4 w-4 mr-2" />
                   {user.user_metadata?.full_name || 'Profile'}
@@ -92,7 +94,7 @@ const Navigation = () => {
                 <Button 
                   onClick={handleLogout}
                   variant="outline"
-                  className={`rounded-full border-2 hover:bg-primary/10 ${scrolled ? 'border-primary/30 text-primary' : 'border-white/30 text-white'}`}
+                  className={`rounded-full border-2 hover:bg-primary/10 ${isSolid ? 'border-primary/30 text-primary' : 'border-white/30 text-white'}`}
                 >
                   Logout
                 </Button>
@@ -102,7 +104,7 @@ const Navigation = () => {
                 <Link to="/auth?mode=login">
                   <Button 
                     variant="ghost" 
-                    className={`hidden md:inline-flex rounded-full hover:bg-secondary/50 ${scrolled ? 'text-foreground' : 'text-white'}`}
+                    className={`hidden md:inline-flex rounded-full hover:bg-secondary/50 ${isSolid ? 'text-muted-foreground' : 'text-white'}`}
                   >
                     Login
                   </Button>
