@@ -21,7 +21,7 @@ const ExploreCosmora = () => {
           <div className="max-w-5xl mx-auto">
             <Button
               variant="ghost"
-              onClick={() => navigate(-1)}
+              onClick={() => navigate('/')}
               className="mb-8 hover:bg-primary/10"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
