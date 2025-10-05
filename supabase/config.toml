@@ -1,1 +1,7 @@
 project_id = "fzpxszxlewkcicvukxbv"
+
+[edge_runtime]
+enabled = true
+
+[functions.evaluate-essay]
+verify_jwt = false

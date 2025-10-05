@@ -110,11 +110,7 @@ const LifeSection = () => {
       });
       navigate('/auth?mode=signup');
     } else {
-      // Aqui você pode adicionar a lógica do teste de perfil
-      toast({
-        title: 'Em breve!',
-        description: 'O teste de perfil estará disponível em breve.',
-      });
+      navigate('/teste-perfil');
     }
   };
 

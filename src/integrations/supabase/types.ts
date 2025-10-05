@@ -35,6 +35,45 @@ export type Database = {
         }
         Relationships: []
       }
+      profile_tests: {
+        Row: {
+          ai_feedback: string | null
+          ai_score: number | null
+          character_count: number
+          created_at: string | null
+          dome_size: string
+          essay: string
+          id: string
+          research_area: string
+          updated_at: string | null
+          user_id: string | null
+        }
+        Insert: {
+          ai_feedback?: string | null
+          ai_score?: number | null
+          character_count: number
+          created_at?: string | null
+          dome_size: string
+          essay: string
+          id?: string
+          research_area: string
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          ai_feedback?: string | null
+          ai_score?: number | null
+          character_count?: number
+          created_at?: string | null
+          dome_size?: string
+          essay?: string
+          id?: string
+          research_area?: string
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string

@@ -15,6 +15,7 @@ import RecyclingDrone from "./pages/RecyclingDrone";
 import CosmoraGarden from "./pages/CosmoraGarden";
 import HeliumGenerator from "./pages/HeliumGenerator";
 import CustomRoom from "./pages/CustomRoom";
+import ProfileTest from "./pages/ProfileTest";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/cosmora-garden" element={<CosmoraGarden />} />
           <Route path="/helium-generator" element={<HeliumGenerator />} />
           <Route path="/custom-room" element={<CustomRoom />} />
+          <Route path="/teste-perfil" element={<ProfileTest />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
