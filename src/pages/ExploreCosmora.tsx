@@ -16,7 +16,7 @@ const ExploreCosmora = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       
-      <main className="flex-grow pt-24 pb-16">
+      <main className="flex-grow pt-32 pb-16">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <Button
