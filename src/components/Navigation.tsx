@@ -93,7 +93,7 @@ const Navigation = () => {
               </>
             ) : (
               <>
-                <Link to="/auth">
+                <Link to="/auth?mode=login">
                   <Button 
                     variant="ghost" 
                     className={`hidden md:inline-flex rounded-full hover:bg-secondary/50 ${scrolled ? 'text-foreground' : 'text-white'}`}
@@ -101,7 +101,7 @@ const Navigation = () => {
                     Login
                   </Button>
                 </Link>
-                <Link to="/auth">
+                <Link to="/auth?mode=signup">
                   <Button className="rounded-full bg-primary hover:bg-primary/90 shadow-cosmic text-white">
                     Sign Up
                   </Button>

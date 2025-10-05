@@ -54,18 +54,40 @@ const Auth = () => {
     setLoading(true);
 
     try {
+      // Validação de nome
+      if (!fullName || fullName.trim().length < 3) {
+        throw new Error('Nome completo deve ter pelo menos 3 caracteres');
+      }
+
+      // Validação de email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        throw new Error('Email inválido');
+      }
+
+      // Verificar se email já existe
+      const { data: existingUser } = await supabase
+        .from('profiles')
+        .select('user_id')
+        .eq('user_id', (await supabase.auth.getUser()).data.user?.id || '');
+
       const { error } = await supabase.auth.signUp({
         email,
         password,
         options: {
           emailRedirectTo: `${window.location.origin}/`,
           data: {
-            full_name: fullName,
+            full_name: fullName.trim(),
           },
         },
       });
 
-      if (error) throw error;
+      if (error) {
+        if (error.message.includes('already registered')) {
+          throw new Error('Este email já está cadastrado. Faça login.');
+        }
+        throw error;
+      }
 
       toast({
         title: 'Conta criada com sucesso!',
@@ -87,12 +109,23 @@ const Auth = () => {
     setLoading(true);
 
     try {
+      // Validação de email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        throw new Error('Email inválido');
+      }
+
       const { error } = await supabase.auth.signInWithPassword({
         email,
         password,
       });
 
-      if (error) throw error;
+      if (error) {
+        if (error.message.includes('Invalid login credentials')) {
+          throw new Error('Email ou senha incorretos');
+        }
+        throw error;
+      }
 
       toast({
         title: 'Login realizado!',
@@ -138,7 +171,7 @@ const Auth = () => {
         <Tabs defaultValue={initialMode} className="w-full">
           <TabsList className="grid w-full grid-cols-2 mb-6">
             <TabsTrigger value="login">Login</TabsTrigger>
-            <TabsTrigger value="signup">Cadastro</TabsTrigger>
+            <TabsTrigger value="signup">Sign Up</TabsTrigger>
           </TabsList>
           
           <TabsContent value="login">
