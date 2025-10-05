@@ -1,9 +1,14 @@
 import { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { supabase } from '@/integrations/supabase/client';
 import cosmoraLogo from '@/assets/cosmora-logo.png';
+import { User } from 'lucide-react';
 
 const Navigation = () => {
+  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
+  const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +18,25 @@ const Navigation = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    // Check current user
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setUser(session?.user ?? null);
+    });
+
+    // Listen for auth changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    navigate('/');
+  };
 
   return (
     <nav
@@ -50,15 +74,40 @@ const Navigation = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <Button 
-              variant="ghost" 
-              className={`hidden md:inline-flex rounded-full hover:bg-secondary/50 ${scrolled ? 'text-foreground' : 'text-white'}`}
-            >
-              Agendar Visita
-            </Button>
-            <Button className="rounded-full bg-primary hover:bg-primary/90 shadow-cosmic text-white">
-              Reservar Agora
-            </Button>
+            {user ? (
+              <>
+                <Button 
+                  variant="ghost" 
+                  className={`hidden md:inline-flex rounded-full hover:bg-secondary/50 ${scrolled ? 'text-foreground' : 'text-white'}`}
+                >
+                  <User className="h-4 w-4 mr-2" />
+                  {user.user_metadata?.full_name || 'Perfil'}
+                </Button>
+                <Button 
+                  onClick={handleLogout}
+                  variant="outline"
+                  className="rounded-full border-2 border-primary/30 hover:bg-primary/10 text-primary"
+                >
+                  Sair
+                </Button>
+              </>
+            ) : (
+              <>
+                <Link to="/auth">
+                  <Button 
+                    variant="ghost" 
+                    className={`hidden md:inline-flex rounded-full hover:bg-secondary/50 ${scrolled ? 'text-foreground' : 'text-white'}`}
+                  >
+                    Login
+                  </Button>
+                </Link>
+                <Link to="/auth">
+                  <Button className="rounded-full bg-primary hover:bg-primary/90 shadow-cosmic text-white">
+                    Sign Up
+                  </Button>
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>

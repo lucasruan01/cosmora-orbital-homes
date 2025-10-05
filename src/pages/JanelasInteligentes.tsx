@@ -160,7 +160,7 @@ const JanelasInteligentes = () => {
               size="lg" 
               className="rounded-full bg-primary hover:bg-primary/90 hover:scale-105 shadow-cosmic text-lg px-10 py-6 transition-all duration-300"
             >
-              Agendar Tour Virtual
+              Faça o Teste de Perfil
             </Button>
           </Card>
         </div>

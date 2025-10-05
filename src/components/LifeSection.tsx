@@ -149,9 +149,12 @@ const LifeSection = () => {
               <div className="relative bg-gradient-to-br from-primary/20 to-purple-500/20 overflow-hidden min-h-[500px]">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(221,83%,53%,0.2),transparent_70%)]" />
                 <img 
+                  key={selectedAmenity.id}
                   src={selectedAmenity.image} 
                   alt={selectedAmenity.title}
-                  className="w-full h-full object-cover animate-fade-in"
+                  className="w-full h-full object-cover transition-opacity duration-300"
+                  loading="eager"
+                  style={{ imageRendering: 'auto' }}
                   data-lov-id="src/components/LifeSection.tsx:142:16"
                 />
               </div>
@@ -172,7 +175,7 @@ const LifeSection = () => {
             size="lg" 
             className="rounded-full bg-primary hover:bg-primary/90 hover:scale-105 shadow-cosmic text-lg px-10 py-6 transition-all duration-300"
           >
-            Agendar Tour Virtual
+            Faça o Teste de Perfil
           </Button>
         </Card>
       </div>
