@@ -9,12 +9,16 @@ const Navigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const [user, setUser] = useState<any>(null);
   const isSolid = scrolled || location.pathname !== '/';
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
+      // Calcula o progresso do scroll de 0 a 1 (de 0px a 300px)
+      const progress = Math.min(window.scrollY / 300, 1);
+      setScrollProgress(progress);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -40,6 +44,17 @@ const Navigation = () => {
     navigate('/');
   };
 
+  // Interpola entre branco (255,255,255) e preto (0,0,0)
+  const getLinkColor = () => {
+    if (location.pathname !== '/') {
+      return 'hsl(var(--muted-foreground))';
+    }
+    const r = Math.round(255 * (1 - scrollProgress));
+    const g = Math.round(255 * (1 - scrollProgress));
+    const b = Math.round(255 * (1 - scrollProgress));
+    return `rgb(${r}, ${g}, ${b})`;
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -60,22 +75,22 @@ const Navigation = () => {
             </a>
             
             <div className="hidden md:flex items-center gap-8">
-              <a href="#residencias" className={`text-sm font-medium hover:text-primary transition-colors ${isSolid ? 'text-muted-foreground' : 'text-white'}`}>
+              <a href="#residencias" style={{ color: getLinkColor() }} className="text-sm font-medium hover:text-primary transition-colors">
                 Residences
               </a>
-              <Link to="/tecnologia" className={`text-sm font-medium hover:text-primary transition-colors ${isSolid ? 'text-muted-foreground' : 'text-white'}`}>
+              <Link to="/tecnologia" style={{ color: getLinkColor() }} className="text-sm font-medium hover:text-primary transition-colors">
                 Technology
               </Link>
-              <a href="#vida" className={`text-sm font-medium hover:text-primary transition-colors ${isSolid ? 'text-muted-foreground' : 'text-white'}`}>
+              <a href="#vida" style={{ color: getLinkColor() }} className="text-sm font-medium hover:text-primary transition-colors">
                 Life in Space
               </a>
-              <Link to="/nossa-missao" className={`text-sm font-medium hover:text-primary transition-colors ${isSolid ? 'text-muted-foreground' : 'text-white'}`}>
+              <Link to="/nossa-missao" style={{ color: getLinkColor() }} className="text-sm font-medium hover:text-primary transition-colors">
                 Our Mission
               </Link>
-              <Link to="/equipe" className={`text-sm font-medium hover:text-primary transition-colors ${isSolid ? 'text-muted-foreground' : 'text-white'}`}>
+              <Link to="/equipe" style={{ color: getLinkColor() }} className="text-sm font-medium hover:text-primary transition-colors">
                 Team
               </Link>
-              <a href="#galeria" className={`text-sm font-medium hover:text-primary transition-colors ${isSolid ? 'text-muted-foreground' : 'text-white'}`}>
+              <a href="#galeria" style={{ color: getLinkColor() }} className="text-sm font-medium hover:text-primary transition-colors">
                 Gallery
               </a>
             </div>
@@ -86,7 +101,8 @@ const Navigation = () => {
               <>
                 <Button 
                   variant="ghost" 
-                  className={`hidden md:inline-flex rounded-full hover:bg-secondary/50 ${isSolid ? 'text-muted-foreground' : 'text-white'}`}
+                  style={{ color: getLinkColor() }}
+                  className="hidden md:inline-flex rounded-full hover:bg-secondary/50"
                 >
                   <User className="h-4 w-4 mr-2" />
                   {user.user_metadata?.full_name || 'Profile'}
@@ -104,7 +120,8 @@ const Navigation = () => {
                 <Link to="/auth?mode=login">
                   <Button 
                     variant="ghost" 
-                    className={`hidden md:inline-flex rounded-full hover:bg-secondary/50 ${isSolid ? 'text-muted-foreground' : 'text-white'}`}
+                    style={{ color: getLinkColor() }}
+                    className="hidden md:inline-flex rounded-full hover:bg-secondary/50"
                   >
                     Login
                   </Button>
