@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import {
   Dialog,
   DialogContent,
@@ -11,6 +11,8 @@ import {
 const HeroSection = () => {
   const navigate = useNavigate();
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -79,18 +81,45 @@ const HeroSection = () => {
       </div>
 
       {/* Video Dialog */}
-      <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+      <Dialog open={isVideoOpen} onOpenChange={(open) => {
+        setIsVideoOpen(open);
+        if (!open) {
+          setIsPlaying(false);
+          if (videoRef.current) {
+            videoRef.current.pause();
+            videoRef.current.currentTime = 0;
+          }
+        }
+      }}>
         <DialogContent className="max-w-5xl p-0 bg-black border-0">
           <DialogClose className="absolute right-4 top-4 z-50 rounded-full bg-black/50 p-2 text-white hover:bg-black/70 transition-colors">
             <X className="h-6 w-6" />
           </DialogClose>
-          <video
-            controls
-            className="w-full h-auto rounded-lg"
-          >
-            <source src="/videos/cosmora-video.mp4" type="video/mp4" />
-            Seu navegador não suporta o elemento de vídeo.
-          </video>
+          <div className="relative">
+            <video
+              ref={videoRef}
+              controls
+              className="w-full h-auto rounded-lg"
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => setIsPlaying(false)}
+            >
+              <source src="/videos/cosmora-video.mp4" type="video/mp4" />
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
+            {!isPlaying && (
+              <button
+                onClick={() => {
+                  videoRef.current?.play();
+                  setIsPlaying(true);
+                }}
+                className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-all group"
+              >
+                <div className="w-20 h-20 flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 transition-all group-hover:scale-110">
+                  <Play className="w-10 h-10 text-white ml-1" fill="white" />
+                </div>
+              </button>
+            )}
+          </div>
         </DialogContent>
       </Dialog>
 
