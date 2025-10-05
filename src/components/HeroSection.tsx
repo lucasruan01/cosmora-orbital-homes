@@ -1,9 +1,16 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Play, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import {
+  Dialog,
+  DialogContent,
+  DialogClose,
+} from '@/components/ui/dialog';
 
 const HeroSection = () => {
   const navigate = useNavigate();
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -47,6 +54,7 @@ const HeroSection = () => {
               size="lg" 
               variant="outline" 
               className="rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:scale-105 text-white text-lg px-8 py-6 group apple-smooth"
+              onClick={() => setIsVideoOpen(true)}
             >
               <Play className="mr-2 h-5 w-5 group-hover:scale-110 apple-smooth" />
               Assista ao Vídeo
@@ -69,6 +77,23 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Video Dialog */}
+      <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+        <DialogContent className="max-w-5xl p-0 bg-black border-0">
+          <DialogClose className="absolute right-4 top-4 z-50 rounded-full bg-black/50 p-2 text-white hover:bg-black/70 transition-colors">
+            <X className="h-6 w-6" />
+          </DialogClose>
+          <video
+            controls
+            autoPlay
+            className="w-full h-auto rounded-lg"
+          >
+            <source src="/videos/cosmora-video.mp4" type="video/mp4" />
+            Seu navegador não suporta o elemento de vídeo.
+          </video>
+        </DialogContent>
+      </Dialog>
 
     </section>
   );
