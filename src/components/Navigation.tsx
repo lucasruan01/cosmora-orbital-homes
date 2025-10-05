@@ -58,22 +58,22 @@ const Navigation = () => {
             </a>
             
             <div className="hidden md:flex items-center gap-8">
-              <a href="#residencias" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
+              <a href="#residencias" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-muted-foreground' : 'text-white'}`}>
                 Residences
               </a>
-              <Link to="/tecnologia" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
+              <Link to="/tecnologia" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-muted-foreground' : 'text-white'}`}>
                 Technology
               </Link>
-              <a href="#vida" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
+              <a href="#vida" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-muted-foreground' : 'text-white'}`}>
                 Life in Space
               </a>
-              <Link to="/nossa-missao" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
+              <Link to="/nossa-missao" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-muted-foreground' : 'text-white'}`}>
                 Our Mission
               </Link>
-              <Link to="/equipe" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
+              <Link to="/equipe" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-muted-foreground' : 'text-white'}`}>
                 Team
               </Link>
-              <a href="#galeria" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
+              <a href="#galeria" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-muted-foreground' : 'text-white'}`}>
                 Gallery
               </a>
             </div>
@@ -84,7 +84,7 @@ const Navigation = () => {
               <>
                 <Button 
                   variant="ghost" 
-                  className={`hidden md:inline-flex rounded-full hover:bg-secondary/50 ${scrolled ? 'text-foreground' : 'text-white'}`}
+                  className={`hidden md:inline-flex rounded-full hover:bg-secondary/50 ${scrolled ? 'text-muted-foreground' : 'text-white'}`}
                 >
                   <User className="h-4 w-4 mr-2" />
                   {user.user_metadata?.full_name || 'Profile'}
@@ -92,7 +92,7 @@ const Navigation = () => {
                 <Button 
                   onClick={handleLogout}
                   variant="outline"
-                  className="rounded-full border-2 border-primary/30 hover:bg-primary/10 text-primary"
+                  className={`rounded-full border-2 hover:bg-primary/10 ${scrolled ? 'border-primary/30 text-primary' : 'border-white/30 text-white'}`}
                 >
                   Logout
                 </Button>
