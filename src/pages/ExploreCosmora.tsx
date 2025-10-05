@@ -41,36 +41,36 @@ const ExploreCosmora = () => {
               <TabsContent value="sobre" className="space-y-6">
                 <Card>
                   <CardContent className="pt-6">
-                    <div className="prose prose-lg max-w-none space-y-6 text-foreground">
-                      <p className="text-lg leading-relaxed">
+                    <div className="prose prose-lg max-w-none space-y-6">
+                      <p className="text-lg leading-relaxed text-muted-foreground">
                         The Cosmora company was born from the curious gaze of young visionaries who believe that space should not be just a research destination — but a new home for humanity.
                       </p>
                       
-                      <p className="text-lg leading-relaxed">
+                      <p className="text-lg leading-relaxed text-muted-foreground">
                         We are driven by a simple yet powerful idea: if humans can reach infinity, they should also be able to live in it with comfort, dignity and well-being.
                       </p>
                       
-                      <p className="text-lg leading-relaxed">
+                      <p className="text-lg leading-relaxed text-muted-foreground">
                         Our purpose is to revolutionize life beyond Earth, creating environments capable of welcoming, inspiring and protecting. We seek to unite science, design and emotion in a single project: a humanized space station, designed for long-term living, where researchers, astronauts — and even their families — can live in harmony.
                       </p>
                       
-                      <h2 className="text-2xl font-bold mt-8 mb-4 text-foreground">Our Mission</h2>
+                      <h2 className="text-2xl font-bold mt-8 mb-4">Our Mission</h2>
                       
-                      <p className="text-lg leading-relaxed">
+                      <p className="text-lg leading-relaxed text-muted-foreground">
                         At Cosmora, our mission is to transform the experience of living and working in space, placing human well-being at the center of innovation.
                         We believe that every researcher dedicated to unveiling the universe deserves more than a workplace in orbit — they deserve a safe, healthy and welcoming home for themselves and their family.
                       </p>
                       
-                      <p className="text-lg leading-relaxed">
+                      <p className="text-lg leading-relaxed text-muted-foreground">
                         That's why we develop environments that unite science, technology and emotion, designed to preserve physical, mental and social balance during extended missions.
                         Every detail of the station — from immersive walls to leisure areas, gyms, schools and medical centers — was created to ensure that our inhabitants can live well, maintain emotional bonds and feel at home, even among the stars.
                       </p>
                       
-                      <p className="text-lg leading-relaxed font-semibold">
+                      <p className="text-lg leading-relaxed text-muted-foreground font-semibold">
                         Caring for well-being is caring for knowledge.
                       </p>
                       
-                      <p className="text-lg leading-relaxed">
+                      <p className="text-lg leading-relaxed text-muted-foreground">
                         Because true human progress is not just about going further, but making each journey a space of full life — for the researcher and everyone who accompanies them.
                       </p>
                     </div>
@@ -81,24 +81,24 @@ const ExploreCosmora = () => {
               <TabsContent value="funcionamento" className="space-y-6">
                 <Card>
                   <CardContent className="pt-6">
-                    <div className="prose prose-lg max-w-none space-y-6 text-foreground">
-                      <h2 className="text-2xl font-bold mb-4 text-foreground">House Aspects</h2>
+                    <div className="prose prose-lg max-w-none space-y-6">
+                      <h2 className="text-2xl font-bold mb-4">House Aspects</h2>
                       
-                      <h3 className="text-xl font-semibold mt-6 mb-3 text-foreground">External Walls / Structure</h3>
+                      <h3 className="text-xl font-semibold mt-6 mb-3">External Walls / Structure</h3>
                       
-                      <p className="text-lg leading-relaxed">
+                      <p className="text-lg leading-relaxed text-muted-foreground">
                         The structure is designed to be modular and lightweight, inspired by NASA space architecture principles, such as inflatable habitats and pre-fabricated rigid modules, which aim to optimize mass, volume and structural safety.
                       </p>
                       
-                      <p className="text-lg leading-relaxed">
+                      <p className="text-lg leading-relaxed text-muted-foreground">
                         Preferred structural materials include lightweight metal alloys or hybrid composites — such as aluminum, aluminum-carbon alloys or sandwich composites — that combine mechanical strength with very low density.
                       </p>
                       
-                      <p className="text-lg leading-relaxed">
+                      <p className="text-lg leading-relaxed text-muted-foreground">
                         For radiation protection and thermal control, a resource similar to NASA's Water Wall concept is used, where wall elements are filled with water or liquid solutions that function as thermal and radiation shields, also integrating water recycling and atmospheric treatment functions.
                       </p>
                       
-                      <p className="text-lg leading-relaxed">
+                      <p className="text-lg leading-relaxed text-muted-foreground">
                         Heat exchange systems (thermal control loops) are employed in real NASA habitats, using liquid circuits to dissipate heat through radiators connected structurally to the habitat carcass or backbone. These systems use rotary joints or flexible connections to accommodate movement or variable pressurization.
                       </p>
                       
@@ -107,7 +107,7 @@ const ExploreCosmora = () => {
                       </p>
                       
                       <div className="mt-8 p-6 bg-muted/50 rounded-lg border border-border/50">
-                        <h4 className="text-lg font-semibold mb-3 text-foreground">Explanatory Video</h4>
+                        <h4 className="text-lg font-semibold mb-3">Explanatory Video</h4>
                         <a 
                           href="https://www.youtube.com/watch?v=bVzppWSIFU0" 
                           target="_blank" 
@@ -120,7 +120,7 @@ const ExploreCosmora = () => {
                       </div>
                       
                       <div className="mt-8 pt-6 border-t border-border/50">
-                        <h4 className="text-lg font-semibold mb-4 text-foreground">Sources and References</h4>
+                        <h4 className="text-lg font-semibold mb-4">Sources and References</h4>
                         <ul className="space-y-2 text-sm text-muted-foreground">
                           <li>
                             <a 
