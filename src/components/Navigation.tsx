@@ -59,22 +59,22 @@ const Navigation = () => {
             
             <div className="hidden md:flex items-center gap-8">
               <a href="#residencias" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
-                Residências
+                Residences
               </a>
               <Link to="/tecnologia" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
-                Tecnologia
+                Technology
               </Link>
               <a href="#vida" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
-                Vida no Espaço
+                Life in Space
               </a>
               <Link to="/nossa-missao" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
-                Nossa Missão
+                Our Mission
               </Link>
               <Link to="/equipe" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
-                Equipe
+                Team
               </Link>
               <a href="#galeria" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>
-                Galeria
+                Gallery
               </a>
             </div>
           </div>
@@ -87,14 +87,14 @@ const Navigation = () => {
                   className={`hidden md:inline-flex rounded-full hover:bg-secondary/50 ${scrolled ? 'text-foreground' : 'text-white'}`}
                 >
                   <User className="h-4 w-4 mr-2" />
-                  {user.user_metadata?.full_name || 'Perfil'}
+                  {user.user_metadata?.full_name || 'Profile'}
                 </Button>
                 <Button 
                   onClick={handleLogout}
                   variant="outline"
                   className="rounded-full border-2 border-primary/30 hover:bg-primary/10 text-primary"
                 >
-                  Sair
+                  Logout
                 </Button>
               </>
             ) : (

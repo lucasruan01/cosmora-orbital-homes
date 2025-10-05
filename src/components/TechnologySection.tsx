@@ -12,40 +12,40 @@ const TechnologySection = () => {
           <div className="space-y-8">
             <Badge className="rounded-full bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 animate-fade-in opacity-0 [animation-delay:200ms] [animation-fill-mode:forwards]">
               <Sparkles className="w-3 h-3 mr-1" />
-              Tecnologia de Ponta
+              Cutting-Edge Technology
             </Badge>
             
             <h2 className="text-gradient-cosmic animate-text-reveal opacity-0 [animation-delay:400ms] [animation-fill-mode:forwards]">
-              Engenharia Espacial de Próxima Geração
+              Next-Generation Space Engineering
             </h2>
             
             <div className="space-y-6">
               <Link to="/gravidade-artificial">
                 <div className="space-y-3 p-4 rounded-2xl hover:bg-card/50 cursor-pointer apple-smooth group animate-fade-up opacity-0 [animation-delay:600ms] [animation-fill-mode:forwards]">
-                  <h3 className="text-2xl font-semibold group-hover:text-primary apple-smooth">Gravidade Artificial</h3>
+                  <h3 className="text-2xl font-semibold group-hover:text-primary apple-smooth">Artificial Gravity</h3>
                   <p className="text-muted-foreground text-lg leading-relaxed">
-                    Sistema de rotação controlada que simula 1G, mantendo seu corpo saudável 
-                    e proporcionando conforto semelhante à Terra.
+                    Controlled rotation system that simulates 1G, keeping your body healthy 
+                    and providing Earth-like comfort.
                   </p>
                 </div>
               </Link>
 
               <Link to="/janelas-inteligentes">
                 <div className="space-y-3 p-4 rounded-2xl hover:bg-card/50 cursor-pointer apple-smooth group animate-fade-up opacity-0 [animation-delay:800ms] [animation-fill-mode:forwards]">
-                  <h3 className="text-2xl font-semibold group-hover:text-primary apple-smooth">Janelas Inteligentes</h3>
+                  <h3 className="text-2xl font-semibold group-hover:text-primary apple-smooth">Smart Windows</h3>
                   <p className="text-muted-foreground text-lg leading-relaxed">
-                    Vidros com proteção UV adaptativa e controle de opacidade, permitindo 
-                    vistas deslumbrantes com total segurança.
+                    Glass with adaptive UV protection and opacity control, allowing 
+                    stunning views with total safety.
                   </p>
                 </div>
               </Link>
 
               <Link to="/clima-personalizado">
                 <div className="space-y-3 p-4 rounded-2xl hover:bg-card/50 cursor-pointer apple-smooth group animate-fade-up opacity-0 [animation-delay:1000ms] [animation-fill-mode:forwards]">
-                  <h3 className="text-2xl font-semibold group-hover:text-primary apple-smooth">Clima Personalizado</h3>
+                  <h3 className="text-2xl font-semibold group-hover:text-primary apple-smooth">Personalized Climate</h3>
                   <p className="text-muted-foreground text-lg leading-relaxed">
-                    Controle individual de temperatura, umidade e composição do ar em cada 
-                    residência, otimizado por IA.
+                    Individual control of temperature, humidity and air composition in each 
+                    residence, optimized by AI.
                   </p>
                 </div>
               </Link>
@@ -56,7 +56,7 @@ const TechnologySection = () => {
             <div className="rounded-2xl overflow-hidden bg-card">
               <img 
                 src={lab1} 
-                alt="Laboratório Espacial Cosmora" 
+                alt="Cosmora Space Laboratory" 
                 className="w-full h-auto group-hover:scale-105 apple-smooth"
               />
             </div>

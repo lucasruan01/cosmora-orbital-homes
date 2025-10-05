@@ -17,14 +17,14 @@ const amenitiesData = [
     icon: Dumbbell,
     image: fitnessImage,
     title: 'CosmoFit',
-    description: 'Academia com equipamentos adaptados para gravidade artificial',
-    subtitle: 'Mantenha-se em forma no espaço',
-    detailedDescription: 'Nossa academia orbital oferece equipamentos de última geração adaptados para ambientes de baixa gravidade. Com sistemas de resistência avançados e treinos personalizados, você mantém sua saúde física em perfeito estado enquanto aprecia a vista do cosmos.',
+    description: 'Gym with equipment adapted for artificial gravity',
+    subtitle: 'Stay fit in space',
+    detailedDescription: 'Our orbital gym offers state-of-the-art equipment adapted for low-gravity environments. With advanced resistance systems and personalized training, you maintain perfect physical health while enjoying the view of the cosmos.',
     features: [
-      'Equipamentos de resistência adaptados à gravidade artificial',
-      'Instrutores especializados em condicionamento espacial',
-      'Programas personalizados de exercícios',
-      'Vista panorâmica do espaço durante o treino'
+      'Resistance equipment adapted to artificial gravity',
+      'Instructors specialized in space conditioning',
+      'Personalized exercise programs',
+      'Panoramic view of space during workout'
     ]
   },
   {
@@ -32,14 +32,14 @@ const amenitiesData = [
     icon: Utensils,
     image: gastronomiaImage,
     title: 'Orbitalicious',
-    description: 'Restaurantes estrelados com chefs especializados em culinária espacial',
-    subtitle: 'Sabores que desafiam a gravidade',
-    detailedDescription: 'Experimente uma culinária revolucionária criada por chefs renomados especialmente treinados para cozinhar em ambiente espacial. Cada refeição é uma experiência gastronômica única, combinando técnicas terrestres com inovações orbitais.',
+    description: 'Starred restaurants with chefs specialized in space cuisine',
+    subtitle: 'Flavors that defy gravity',
+    detailedDescription: 'Experience revolutionary cuisine created by renowned chefs specially trained to cook in a space environment. Each meal is a unique gastronomic experience, combining terrestrial techniques with orbital innovations.',
     features: [
-      'Chefs premiados especializados em culinária espacial',
-      'Ingredientes frescos cultivados em fazendas orbitais',
-      'Experiências gastronômicas em gravidade zero',
-      'Menus personalizados para necessidades nutricionais espaciais'
+      'Award-winning chefs specialized in space cuisine',
+      'Fresh ingredients grown in orbital farms',
+      'Zero-gravity gastronomic experiences',
+      'Personalized menus for space nutritional needs'
     ]
   },
   {
@@ -47,14 +47,14 @@ const amenitiesData = [
     icon: Briefcase,
     image: workspaceImage,
     title: 'SpaceWork',
-    description: 'Escritórios com a melhor vista do universo',
-    subtitle: 'Produtividade elevada ao próximo nível',
-    detailedDescription: 'Trabalhe em escritórios de última geração com vista privilegiada da Terra e do espaço sideral. Equipados com tecnologia de ponta e conectividade ultra-rápida, nossos espaços de trabalho proporcionam o ambiente perfeito para sua produtividade.',
+    description: 'Offices with the best view of the universe',
+    subtitle: 'Productivity elevated to the next level',
+    detailedDescription: 'Work in state-of-the-art offices with a privileged view of Earth and outer space. Equipped with cutting-edge technology and ultra-fast connectivity, our workspaces provide the perfect environment for your productivity.',
     features: [
-      'Internet de altíssima velocidade via satélite',
-      'Salas de reunião com holografia avançada',
-      'Estações de trabalho ergonômicas adaptadas',
-      'Vista panorâmica da Terra e do cosmos'
+      'Ultra-high-speed satellite internet',
+      'Meeting rooms with advanced holography',
+      'Adapted ergonomic workstations',
+      'Panoramic view of Earth and the cosmos'
     ]
   },
   {
@@ -62,14 +62,14 @@ const amenitiesData = [
     icon: Heart,
     image: medicoImage,
     title: 'AstroMed',
-    description: 'Atendimento médico 24/7 com tecnologia de ponta',
-    subtitle: 'Sua saúde é nossa prioridade',
-    detailedDescription: 'Centro médico de última geração com equipe especializada em medicina espacial. Monitoramento constante, tecnologia avançada de diagnóstico e tratamentos inovadores garantem seu bem-estar a qualquer momento.',
+    description: '24/7 medical care with cutting-edge technology',
+    subtitle: 'Your health is our priority',
+    detailedDescription: 'State-of-the-art medical center with a team specialized in space medicine. Constant monitoring, advanced diagnostic technology and innovative treatments ensure your well-being at any time.',
     features: [
-      'Equipe médica especializada em medicina espacial',
-      'Monitoramento de saúde em tempo real',
-      'Tecnologia de diagnóstico de última geração',
-      'Protocolos avançados de emergência espacial'
+      'Medical team specialized in space medicine',
+      'Real-time health monitoring',
+      'State-of-the-art diagnostic technology',
+      'Advanced space emergency protocols'
     ]
   }
 ];
@@ -104,8 +104,8 @@ const LifeSection = () => {
   const handleTestClick = () => {
     if (!user) {
       toast({
-        title: 'Autenticação necessária',
-        description: 'Antes crie uma conta ou entre numa existente.',
+        title: 'Authentication required',
+        description: 'Please create an account or sign in to an existing one.',
         variant: 'destructive',
       });
       navigate('/auth?mode=signup');
@@ -122,10 +122,10 @@ const LifeSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-gradient-cosmic mb-6">
-            Vida em Órbita
+            Life in Orbit
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Tudo que você precisa para viver, trabalhar e prosperar entre as estrelas.
+            Everything you need to live, work and thrive among the stars.
           </p>
         </div>
 
@@ -209,18 +209,18 @@ const LifeSection = () => {
         {/* CTA Section */}
         <Card className="p-12 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 text-center max-w-4xl mx-auto">
           <h3 className="text-3xl font-semibold mb-4">
-            Pronto para uma Nova Vida?
+            Ready for a New Life?
           </h3>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Agende uma visita virtual e descubra como seria viver na estação espacial 
-            residencial mais avançada já criada.
+            Schedule a virtual visit and discover what it would be like to live in the 
+            most advanced residential space station ever created.
           </p>
           <Button 
             size="lg" 
             onClick={handleTestClick}
             className="rounded-full bg-primary hover:bg-primary/90 hover:scale-105 shadow-cosmic text-lg px-10 py-6 transition-all duration-300"
           >
-            Faça o Teste de Perfil
+            Take the Profile Test
           </Button>
         </Card>
       </div>

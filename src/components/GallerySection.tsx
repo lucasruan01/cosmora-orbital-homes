@@ -20,11 +20,11 @@ const GallerySection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-20 animate-text-reveal opacity-0 [animation-delay:200ms] [animation-fill-mode:forwards]">
           <h2 className="text-gradient-cosmic mb-6">
-            Dentro da Cosmora
+            Inside Cosmora
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Explore os espaços onde ciência e luxo se encontram a 400 quilômetros 
-            acima da Terra.
+            Explore the spaces where science and luxury meet 400 kilometers 
+            above Earth.
           </p>
         </div>
 

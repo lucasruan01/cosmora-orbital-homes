@@ -20,7 +20,7 @@ const RecyclingDrone = () => {
             className="mb-8 hover:bg-primary/10"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Voltar
+            Back
           </Button>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
@@ -29,9 +29,9 @@ const RecyclingDrone = () => {
                 Recycling Drone
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Nossos drones autônomos de reciclagem espacial representam o futuro da sustentabilidade orbital. 
-                Equipados com tecnologia de ponta, eles coletam e processam detritos espaciais, transformando 
-                lixo orbital em recursos valiosos para a estação.
+                Our autonomous space recycling drones represent the future of orbital sustainability. 
+                Equipped with cutting-edge technology, they collect and process space debris, transforming 
+                orbital waste into valuable resources for the station.
               </p>
             </div>
             
@@ -47,43 +47,43 @@ const RecyclingDrone = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-20">
             <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-purple-500/5 border border-primary/10">
               <Recycle className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Reciclagem Automatizada</h3>
+              <h3 className="text-2xl font-bold mb-4">Automated Recycling</h3>
               <p className="text-muted-foreground">
-                Sistema de IA avançado identifica e processa diferentes tipos de detritos espaciais, 
-                maximizando o aproveitamento de materiais.
+                Advanced AI system identifies and processes different types of space debris, 
+                maximizing material utilization.
               </p>
             </div>
 
             <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-purple-500/5 border border-primary/10">
               <Zap className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Energia Solar</h3>
+              <h3 className="text-2xl font-bold mb-4">Solar Energy</h3>
               <p className="text-muted-foreground">
-                Painéis solares de alta eficiência garantem operação contínua sem necessidade de 
-                reabastecimento, com autonomia ilimitada.
+                High-efficiency solar panels ensure continuous operation without the need for 
+                refueling, with unlimited autonomy.
               </p>
             </div>
 
             <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-purple-500/5 border border-primary/10">
               <Shield className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Navegação Segura</h3>
+              <h3 className="text-2xl font-bold mb-4">Safe Navigation</h3>
               <p className="text-muted-foreground">
-                Sensores múltiplos e sistema de navegação inteligente evitam colisões e garantem 
-                operação segura no ambiente espacial.
+                Multiple sensors and intelligent navigation system avoid collisions and ensure 
+                safe operation in the space environment.
               </p>
             </div>
           </div>
 
           <div className="bg-gradient-to-br from-primary/10 to-purple-500/10 rounded-3xl p-12">
-            <h2 className="text-3xl font-bold mb-6">Sustentabilidade Espacial</h2>
+            <h2 className="text-3xl font-bold mb-6">Space Sustainability</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              A Cosmora lidera a revolução da sustentabilidade no espaço. Nossos drones de reciclagem 
-              não apenas limpam a órbita terrestre, mas também fornecem matéria-prima essencial para 
-              expansão e manutenção da estação.
+              Cosmora leads the sustainability revolution in space. Our recycling drones 
+              not only clean Earth's orbit but also provide essential raw materials for 
+              station expansion and maintenance.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Cada drone é capaz de processar até 500kg de detritos por mês, transformando-os em 
-              materiais reutilizáveis para construção, manutenção e até mesmo fabricação de novos 
-              componentes espaciais.
+              Each drone is capable of processing up to 500kg of debris per month, transforming them into 
+              reusable materials for construction, maintenance and even manufacturing of new 
+              space components.
             </p>
           </div>
         </div>

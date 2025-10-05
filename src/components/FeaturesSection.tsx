@@ -4,29 +4,29 @@ import { Home, Cpu, Leaf, FlaskConical } from 'lucide-react';
 const features = [
   {
     icon: Home,
-    title: 'Módulos Residenciais',
-    description: 'Apartamentos de 45m² a 200m² com vistas panorâmicas da Terra e do cosmos.',
+    title: 'Residential Modules',
+    description: 'Apartments from 45m² to 200m² with panoramic views of Earth and the cosmos.',
     gradient: 'from-blue-500 to-cyan-500',
     bgColor: 'bg-blue-500/10'
   },
   {
     icon: Cpu,
-    title: 'Tecnologia Avançada',
-    description: 'Sistemas de IA integrados, conectividade 5G e automação residencial de última geração.',
+    title: 'Advanced Technology',
+    description: 'Integrated AI systems, 5G connectivity and cutting-edge home automation.',
     gradient: 'from-purple-500 to-pink-500',
     bgColor: 'bg-purple-500/10'
   },
   {
     icon: Leaf,
-    title: 'Sustentabilidade',
-    description: 'Energia solar orbital, reciclagem de ar e água com eficiência de 99%.',
+    title: 'Sustainability',
+    description: 'Orbital solar energy, air and water recycling with 99% efficiency.',
     gradient: 'from-green-500 to-emerald-500',
     bgColor: 'bg-green-500/10'
   },
   {
     icon: FlaskConical,
-    title: 'Trabalho e P&D',
-    description: 'Pesquisas e trabalhos que serão feitos em nossa estação.',
+    title: 'Work & R&D',
+    description: 'Research and work that will be done at our station.',
     gradient: 'from-orange-500 to-red-500',
     bgColor: 'bg-orange-500/10'
   }
@@ -38,10 +38,10 @@ const FeaturesSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-20 animate-fade-in opacity-0 [animation-delay:200ms] [animation-fill-mode:forwards]">
           <h2 className="text-gradient-cosmic mb-6">
-            Luxo Além da Imaginação
+            Luxury Beyond Imagination
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Cada detalhe foi pensado para proporcionar uma experiência única de vida no espaço.
+            Every detail has been designed to provide a unique space living experience.
           </p>
         </div>
 

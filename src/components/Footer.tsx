@@ -74,8 +74,8 @@ const Footer = ({ sources }: FooterProps) => {
               className="h-8 w-auto mb-4"
             />
             <p className="text-muted-foreground text-sm leading-relaxed">
-              A primeira estação espacial residencial de luxo. 
-              Transformando sonhos em realidade orbital.
+              The first luxury residential space station. 
+              Transforming dreams into orbital reality.
             </p>
             <div className="flex gap-3 pt-2">
               <Button 
@@ -121,20 +121,20 @@ const Footer = ({ sources }: FooterProps) => {
             <Dialog>
               <DialogTrigger asChild>
                 <button className="text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all inline-block text-left">
-                  Seja um Stakeholder
+                  Become a Stakeholder
                 </button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-md">
                 <DialogHeader>
-                  <DialogTitle>Seja um Stakeholder</DialogTitle>
+                  <DialogTitle>Become a Stakeholder</DialogTitle>
                   <DialogDescription>
-                    Deixe seu e-mail para receber informações exclusivas sobre investimento na Cosmora.
+                    Leave your email to receive exclusive information about investing in Cosmora.
                   </DialogDescription>
                 </DialogHeader>
                 <div className="flex flex-col gap-4 py-4">
                   <Input 
                     type="email" 
-                    placeholder="seu@email.com" 
+                    placeholder="your@email.com" 
                     value={stakeholderEmail}
                     onChange={(e) => setStakeholderEmail(e.target.value)}
                     className="rounded-full"
@@ -147,7 +147,7 @@ const Footer = ({ sources }: FooterProps) => {
                       setStakeholderEmail('');
                     }}
                   >
-                    Enviar
+                    Submit
                   </Button>
                 </div>
               </DialogContent>
@@ -155,25 +155,25 @@ const Footer = ({ sources }: FooterProps) => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Sobre</h3>
+            <h3 className="font-semibold mb-4">About</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Nossa Missão</a></li>
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Equipe</a></li>
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Tecnologia</a></li>
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Sustentabilidade</a></li>
-              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Imprensa</a></li>
+              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Our Mission</a></li>
+              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Team</a></li>
+              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Technology</a></li>
+              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Sustainability</a></li>
+              <li><a href="#" className="hover:text-primary hover:translate-x-1 transition-all inline-block">Press</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Fique por Dentro</h3>
+            <h3 className="font-semibold mb-4">Stay Updated</h3>
             <p className="text-sm text-muted-foreground mb-4">
-              Receba novidades sobre o projeto Cosmora
+              Receive news about the Cosmora project
             </p>
             <div className="flex gap-2">
               <Input 
                 type="email" 
-                placeholder="Seu e-mail"
+                placeholder="Your email"
                 value={newsletterEmail}
                 onChange={(e) => setNewsletterEmail(e.target.value)}
                 className="rounded-full border-border/50 focus:border-primary transition-colors"
@@ -182,7 +182,7 @@ const Footer = ({ sources }: FooterProps) => {
                 onClick={handleNewsletterSubmit}
                 className="rounded-full bg-primary hover:bg-primary/90 hover:scale-105 transition-all duration-300 shrink-0"
               >
-                Inscrever
+                Subscribe
               </Button>
             </div>
           </div>
@@ -190,7 +190,7 @@ const Footer = ({ sources }: FooterProps) => {
 
         {sources && sources.length > 0 && (
           <div className="pt-8 border-t border-border/50 mb-8">
-            <h3 className="font-semibold mb-4 text-sm">Fontes e Referências</h3>
+            <h3 className="font-semibold mb-4 text-sm">Sources and References</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               {sources.map((source, index) => (
                 <li key={index}>
@@ -209,10 +209,10 @@ const Footer = ({ sources }: FooterProps) => {
         )}
 
         <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>© 2026 Cosmora. Todos os direitos reservados.</p>
+          <p>© 2026 Cosmora. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-primary hover:underline transition-all">Privacidade</a>
-            <a href="#" className="hover:text-primary hover:underline transition-all">Termos</a>
+            <a href="#" className="hover:text-primary hover:underline transition-all">Privacy</a>
+            <a href="#" className="hover:text-primary hover:underline transition-all">Terms</a>
             <a href="#" className="hover:text-primary hover:underline transition-all">Cookies</a>
           </div>
         </div>

@@ -38,8 +38,8 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light animate-fade-up opacity-0 [animation-delay:600ms] [animation-fill-mode:forwards]">
-            Descubra uma nova dimensão da vida. Cosmora é a primeira estação espacial 
-            residencial de luxo, onde tecnologia encontra conforto a 400km de altitude.
+            Discover a new dimension of life. Cosmora is the first luxury 
+            residential space station, where technology meets comfort at 400km altitude.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 animate-fade-up opacity-0 [animation-delay:1000ms] [animation-fill-mode:forwards]">
@@ -59,22 +59,22 @@ const HeroSection = () => {
               onClick={() => setIsVideoOpen(true)}
             >
               <Play className="mr-2 h-5 w-5 group-hover:scale-110 apple-smooth" />
-              Assista ao Vídeo
+              Watch Video
             </Button>
           </div>
 
           <div className="pt-12 flex items-center justify-center gap-8 text-white/80 text-sm animate-fade-in opacity-0 [animation-delay:1400ms] [animation-fill-mode:forwards]">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              <span>Lançamento 2026</span>
+              <span>Launch 2026</span>
             </div>
             <div className="hidden sm:block w-px h-4 bg-white/30" />
             <div className="hidden sm:flex items-center gap-2">
-              <span>400km de Altitude</span>
+              <span>400km Altitude</span>
             </div>
             <div className="hidden sm:block w-px h-4 bg-white/30" />
             <div className="hidden sm:flex items-center gap-2">
-              <span>Gravidade 1G</span>
+              <span>1G Gravity</span>
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@ const HeroSection = () => {
               }}
             >
               <source src="/videos/cosmora-video.mp4" type="video/mp4" />
-              Seu navegador não suporta o elemento de vídeo.
+              Your browser does not support the video element.
             </video>
             {!isPlaying && (
               <button
