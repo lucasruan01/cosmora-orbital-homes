@@ -41,15 +41,15 @@ const GravidadeArtificial = () => {
   const handleTestClick = () => {
     if (!user) {
       toast({
-        title: 'Autenticação necessária',
-        description: 'Antes crie uma conta ou entre numa existente.',
+        title: 'Authentication required',
+        description: 'Please create an account or sign in to an existing one.',
         variant: 'destructive',
       });
       navigate('/auth?mode=signup');
     } else {
       toast({
-        title: 'Em breve!',
-        description: 'O teste de perfil estará disponível em breve.',
+        title: 'Coming soon!',
+        description: 'The profile test will be available soon.',
       });
     }
   };
@@ -66,7 +66,7 @@ const GravidadeArtificial = () => {
             onClick={() => navigate(-1)}
           >
             <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-            Voltar
+            Back
           </Button>
 
           {/* Header */}
@@ -80,96 +80,96 @@ const GravidadeArtificial = () => {
               <Gauge className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl font-bold mb-4 text-gradient-cosmic">
-              Gravidade Artificial
+              Artificial Gravity
             </h1>
             <p className="text-2xl text-muted-foreground">
-              9.8G de Conforto e Saúde no Espaço
+              9.8G of Comfort and Health in Space
             </p>
           </div>
 
           {/* Content Sections */}
           <div className="space-y-12">
-            {/* Como funciona */}
+            {/* How it works */}
             <Card 
               ref={section1.ref}
               className={`p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 transition-all duration-1000 ${
                 section1.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Como funciona?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">How does it work?</h2>
               <div className="space-y-4 text-lg leading-relaxed">
                 <p>
-                  Na Cosmora, desenvolvemos ambientes pensados para o corpo humano viver bem além da Terra.
-                  Por isso, nossas casas espaciais utilizam o princípio da gravidade artificial por rotação, inspirado em estudos da NASA.
+                  At Cosmora, we develop environments designed for the human body to live well beyond Earth.
+                  That's why our space houses use the principle of artificial gravity by rotation, inspired by NASA studies.
                 </p>
                 <p>
-                  Ao girar lentamente, a estrutura cria uma força centrífuga que reproduz até 100% da gravidade terrestre (9.8G), o suficiente para manter músculos e ossos ativos, garantindo conforto e saúde durante longas jornadas pelo espaço.
+                  By rotating slowly, the structure creates a centrifugal force that reproduces up to 100% of Earth's gravity (9.8G), enough to keep muscles and bones active, ensuring comfort and health during long journeys through space.
                 </p>
               </div>
             </Card>
 
-            {/* Estrutura e controle */}
+            {/* Structure and control */}
             <Card 
               ref={section2.ref}
               className={`p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 transition-all duration-1000 ${
                 section2.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Estrutura e controle:</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Structure and control:</h2>
               <div className="space-y-4 text-lg leading-relaxed">
                 <p>
-                  Na Cosmora, transformamos conceitos complexos em soluções simples para a vida no espaço.
+                  At Cosmora, we transform complex concepts into simple solutions for life in space.
                 </p>
                 <p>
-                  Imagine um anel giratório dentro da estação: quando ele gira, o chão "empurra" os astronautas para fora, criando a sensação de peso.
-                  Motores controlam a rotação constante, enquanto sistemas de equilíbrio mantêm a estabilidade da estrutura, garantindo conforto e segurança em cada movimento.
+                  Imagine a rotating ring inside the station: when it spins, the floor "pushes" the astronauts outward, creating the sensation of weight.
+                  Motors control the constant rotation, while balance systems maintain the structure's stability, ensuring comfort and safety in every movement.
                 </p>
               </div>
             </Card>
 
-            {/* Benefícios */}
+            {/* Benefits */}
             <Card 
               ref={section3.ref}
               className={`p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 transition-all duration-1000 ${
                 section3.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Benefícios:</h2>
-              <p className="text-lg mb-6">Com 9.8G simulada, nossas moradias espaciais mantêm o corpo em equilíbrio:</p>
+              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Benefits:</h2>
+              <p className="text-lg mb-6">With simulated 9.8G, our space dwellings keep the body in balance:</p>
               <ul className="space-y-3 text-lg">
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Músculos e ossos continuam fortes;</span>
+                  <span>Muscles and bones remain strong;</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>O fluxo sanguíneo permanece estável;</span>
+                  <span>Blood flow remains stable;</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>A vida a bordo se torna mais próxima da experiência na Terra.</span>
+                  <span>Life aboard becomes closer to the Earth experience.</span>
                 </li>
               </ul>
               <p className="mt-6 text-lg leading-relaxed">
-                Esses resultados se baseiam em estudos de gravidade artificial realizados com humanos e animais pela NASA e pela Agência Espacial Alemã (DLR), um passo essencial para tornar o espaço um lar possível.
+                These results are based on artificial gravity studies conducted with humans and animals by NASA and the German Aerospace Agency (DLR), an essential step to make space a possible home.
               </p>
             </Card>
 
-            {/* Desafios */}
+            {/* Challenges */}
             <Card 
               ref={section4.ref}
               className={`p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 transition-all duration-1000 ${
                 section4.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Desafios:</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Challenges:</h2>
               <div className="space-y-4 text-lg leading-relaxed">
                 <p>
-                  Na Cosmora, cada detalhe é pensado para unir conforto e precisão.
-                  A rotação deve ser suave, evitando tonturas, e o módulo precisa ter raio suficiente para reduzir efeitos como o Coriolis — aquela sensação incomum ao se mover dentro de algo em rotação.
+                  At Cosmora, every detail is designed to unite comfort and precision.
+                  The rotation must be smooth, avoiding dizziness, and the module needs sufficient radius to reduce effects like Coriolis — that unusual sensation when moving inside something rotating.
                 </p>
                 <p>
-                  Mesmo com desafios técnicos, essa é uma das soluções mais promissoras para tornar missões à Lua e a Marte mais seguras e sustentáveis
+                  Even with technical challenges, this is one of the most promising solutions to make missions to the Moon and Mars safer and more sustainable.
                 </p>
               </div>
             </Card>
@@ -183,17 +183,17 @@ const GravidadeArtificial = () => {
             }`}
           >
             <h3 className="text-3xl font-semibold mb-4">
-              Experimente a Gravidade Artificial
+              Experience Artificial Gravity
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Agende uma visita virtual e sinta como é viver com conforto gravitacional em órbita.
+              Schedule a virtual visit and feel what it's like to live with gravitational comfort in orbit.
             </p>
             <Button 
               size="lg"
               onClick={handleTestClick}
               className="rounded-full bg-primary hover:bg-primary/90 hover:scale-105 shadow-cosmic text-lg px-10 py-6 transition-all duration-300"
             >
-              Faça o Teste de Perfil
+              Take the Profile Test
             </Button>
           </Card>
         </div>

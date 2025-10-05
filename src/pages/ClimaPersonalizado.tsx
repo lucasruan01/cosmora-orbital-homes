@@ -40,15 +40,15 @@ const ClimaPersonalizado = () => {
   const handleTestClick = () => {
     if (!user) {
       toast({
-        title: 'Autenticação necessária',
-        description: 'Antes crie uma conta ou entre numa existente.',
+        title: 'Authentication required',
+        description: 'Please create an account or sign in to an existing one.',
         variant: 'destructive',
       });
       navigate('/auth?mode=signup');
     } else {
       toast({
-        title: 'Em breve!',
-        description: 'O teste de perfil estará disponível em breve.',
+        title: 'Coming soon!',
+        description: 'The profile test will be available soon.',
       });
     }
   };
@@ -65,7 +65,7 @@ const ClimaPersonalizado = () => {
             onClick={() => navigate(-1)}
           >
             <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-            Voltar
+            Back
           </Button>
 
           {/* Header */}
@@ -79,31 +79,31 @@ const ClimaPersonalizado = () => {
               <Thermometer className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl font-bold mb-4 text-gradient-cosmic">
-              Clima Personalizado
+              Personalized Climate
             </h1>
             <p className="text-2xl text-muted-foreground">
-              Controle Total para Cada Residência
+              Total Control for Each Residence
             </p>
           </div>
 
           {/* Content Sections */}
           <div className="space-y-12">
-            {/* Visão Geral */}
+            {/* Overview */}
             <Card 
               ref={section1.ref}
               className={`p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 transition-all duration-1000 ${
                 section1.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Visão Geral</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Overview</h2>
               <p className="text-lg leading-relaxed">
-                Na Cosmora, priorizamos o bem-estar de cada habitante. Por isso, nossas acomodações terão 
-                <strong> controle individualizado de temperatura, umidade e qualidade do ar</strong>, sempre otimizado 
-                por inteligência artificial — para que cada pessoa viva exatamente da maneira mais confortável e saudável.
+                At Cosmora, we prioritize the well-being of each inhabitant. That's why our accommodations will have 
+                <strong> individualized control of temperature, humidity and air quality</strong>, always optimized 
+                by artificial intelligence — so everyone can live exactly the way that's most comfortable and healthy for them.
               </p>
             </Card>
 
-            {/* Como funciona */}
+            {/* How it works */}
             <Card 
               ref={section2.ref}
               className={`p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 transition-all duration-1000 ${
@@ -111,68 +111,68 @@ const ClimaPersonalizado = () => {
               }`}
             >
               <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">
-                Como funciona:
+                How it works:
               </h2>
               
               <div className="space-y-8">
-                {/* Sistema ECLSS */}
+                {/* ECLSS System */}
                 <div>
-                  <h3 className="text-2xl font-semibold mb-4">Sistema integrado de suporte ambiental (ECLSS)</h3>
+                  <h3 className="text-2xl font-semibold mb-4">Integrated Environmental Support System (ECLSS)</h3>
                   <p className="text-lg leading-relaxed mb-4">
-                    Na Estação Espacial Internacional, o ECLSS cuida da temperatura, da umidade e do ar para manter todos confortáveis e seguros. Na Cosmora, levamos esse conceito para cada residência, ajustando o ambiente de acordo com as necessidades de quem está dentro.
+                    On the International Space Station, ECLSS takes care of temperature, humidity and air to keep everyone comfortable and safe. At Cosmora, we take this concept to each residence, adjusting the environment according to the needs of those inside.
                   </p>
                 </div>
 
-                {/* Sensores e IA */}
+                {/* Sensors and AI */}
                 <div>
-                  <h3 className="text-2xl font-semibold mb-4">Sensores e IA em tempo real</h3>
+                  <h3 className="text-2xl font-semibold mb-4">Real-time Sensors and AI</h3>
                   <p className="text-lg leading-relaxed">
-                    Sensores inteligentes medem temperatura, umidade, CO₂ e outros gases o tempo todo, enquanto nossa IA interpreta os dados e faz ajustes automáticos, seja para aquecer, esfriar, desumidificar ou renovar o ar, garantindo um clima sempre perfeito.
+                    Smart sensors measure temperature, humidity, CO₂ and other gases all the time, while our AI interprets the data and makes automatic adjustments, whether to heat, cool, dehumidify or renew the air, ensuring a perfect climate at all times.
                   </p>
                 </div>
 
-                {/* Ciclagem e purificação */}
+                {/* Air cycling and purification */}
                 <div>
-                  <h3 className="text-2xl font-semibold mb-4">Ciclagem e purificação do ar</h3>
+                  <h3 className="text-2xl font-semibold mb-4">Air Cycling and Purification</h3>
                   <p className="text-lg leading-relaxed mb-4">
-                    O ar circula de forma constante, com oxigênio renovado, CO₂ removido e filtragem de partículas e compostos indesejados. Cada habitação funciona de forma modular, adaptando a purificação e a ciclagem do ar ao perfil de cada morador.
+                    Air circulates constantly, with renewed oxygen, removed CO₂ and filtering of unwanted particles and compounds. Each dwelling functions modularly, adapting air purification and cycling to each resident's profile.
                   </p>
                 </div>
 
-                {/* Materiais inteligentes */}
+                {/* Smart materials */}
                 <div>
-                  <h3 className="text-2xl font-semibold mb-4">Construção com materiais inteligentes</h3>
+                  <h3 className="text-2xl font-semibold mb-4">Construction with Smart Materials</h3>
                   <p className="text-lg leading-relaxed">
-                    As paredes e dutos usam materiais inteligentes com isolamento térmico avançado e membranas que controlam a umidade e ajudam na troca seletiva de gases. Alguns desses conceitos, já testados pela NASA, até permitem reciclar ar e água dentro da própria estrutura, tornando a vida no espaço mais segura, confortável e sustentável.
+                    Walls and ducts use smart materials with advanced thermal insulation and membranes that control humidity and help with selective gas exchange. Some of these concepts, already tested by NASA, even allow recycling air and water within the structure itself, making life in space safer, more comfortable and sustainable.
                   </p>
                 </div>
               </div>
             </Card>
 
-            {/* Benefícios */}
+            {/* Benefits */}
             <Card 
               ref={section3.ref}
               className={`p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 transition-all duration-1000 ${
                 section3.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Benefícios na prática:</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Benefits in practice:</h2>
               <ul className="space-y-3 text-lg">
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span><strong>Conforto feito para você:</strong> cada morador pode ajustar seu microclima ideal — nada de "uma temperatura para todos".</span>
+                  <span><strong>Comfort made for you:</strong> each resident can adjust their ideal microclimate — no more "one temperature for all".</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span><strong>Saúde em primeiro lugar:</strong> ar puro e umidade na medida certa ajudam a reduzir alergias, ressecamento e qualquer desconforto.</span>
+                  <span><strong>Health first:</strong> pure air and just-right humidity help reduce allergies, dryness and any discomfort.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span><strong>Energia usada com inteligência:</strong> nossa IA ajusta só o necessário, evitando desperdício e mantendo tudo eficiente.</span>
+                  <span><strong>Intelligent energy use:</strong> our AI adjusts only what's necessary, avoiding waste and keeping everything efficient.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span><strong>Viver como no futuro:</strong> morar no espaço não é só sobreviver, é prosperar em cada detalhe do seu dia a dia em órbita.</span>
+                  <span><strong>Living like the future:</strong> living in space isn't just surviving, it's thriving in every detail of your day-to-day in orbit.</span>
                 </li>
               </ul>
             </Card>
@@ -186,17 +186,17 @@ const ClimaPersonalizado = () => {
             }`}
           >
             <h3 className="text-3xl font-semibold mb-4">
-              Seu Conforto, Sua Atmosfera
+              Your Comfort, Your Atmosphere
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Experimente o futuro do controle ambiental personalizado na Cosmora.
+              Experience the future of personalized environmental control at Cosmora.
             </p>
             <Button 
               size="lg"
               onClick={handleTestClick}
               className="rounded-full bg-primary hover:bg-primary/90 hover:scale-105 shadow-cosmic text-lg px-10 py-6 transition-all duration-300"
             >
-              Faça o Teste de Perfil
+              Take the Profile Test
             </Button>
           </Card>
         </div>

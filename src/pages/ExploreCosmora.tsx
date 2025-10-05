@@ -22,8 +22,8 @@ const ExploreCosmora = () => {
             
             <Tabs defaultValue="sobre" className="w-full">
               <TabsList className="grid w-full grid-cols-2 mb-8">
-                <TabsTrigger value="sobre">Sobre Cosmora</TabsTrigger>
-                <TabsTrigger value="funcionamento">Funcionamento</TabsTrigger>
+                <TabsTrigger value="sobre">About Cosmora</TabsTrigger>
+                <TabsTrigger value="funcionamento">How It Works</TabsTrigger>
               </TabsList>
               
               <TabsContent value="sobre" className="space-y-6">
@@ -31,35 +31,35 @@ const ExploreCosmora = () => {
                   <CardContent className="pt-6">
                     <div className="prose prose-lg max-w-none space-y-6 text-foreground">
                       <p className="text-lg leading-relaxed">
-                        A empresa Cosmora nasceu do olhar curioso de jovens visionários que acreditam que o espaço não deve ser apenas um destino de pesquisa — mas um novo lar para a humanidade.
+                        The Cosmora company was born from the curious gaze of young visionaries who believe that space should not be just a research destination — but a new home for humanity.
                       </p>
                       
                       <p className="text-lg leading-relaxed">
-                        Somos movidos por uma ideia simples e poderosa: se o ser humano pode alcançar o infinito, ele também deve poder viver nele com conforto, dignidade e bem-estar.
+                        We are driven by a simple yet powerful idea: if humans can reach infinity, they should also be able to live in it with comfort, dignity and well-being.
                       </p>
                       
                       <p className="text-lg leading-relaxed">
-                        Nosso propósito é revolucionar a vida fora da Terra, criando ambientes capazes de acolher, inspirar e proteger. Buscamos unir ciência, design e emoção em um só projeto: uma estação espacial humanizada, pensada para o convívio a longo prazo, onde o pesquisador, o astronauta — e até suas famílias — possam viver em harmonia.
+                        Our purpose is to revolutionize life beyond Earth, creating environments capable of welcoming, inspiring and protecting. We seek to unite science, design and emotion in a single project: a humanized space station, designed for long-term living, where researchers, astronauts — and even their families — can live in harmony.
                       </p>
                       
-                      <h2 className="text-2xl font-bold mt-8 mb-4 text-foreground">Nossa Missão</h2>
+                      <h2 className="text-2xl font-bold mt-8 mb-4 text-foreground">Our Mission</h2>
                       
                       <p className="text-lg leading-relaxed">
-                        Na Cosmora, nossa missão é transformar a experiência de viver e trabalhar no espaço, colocando o bem-estar humano no centro da inovação.
-                        Acreditamos que cada pesquisador que se dedica a desvendar o universo merece mais do que um posto de trabalho em órbita — merece um lar seguro, saudável e acolhedor para si e para sua família.
+                        At Cosmora, our mission is to transform the experience of living and working in space, placing human well-being at the center of innovation.
+                        We believe that every researcher dedicated to unveiling the universe deserves more than a workplace in orbit — they deserve a safe, healthy and welcoming home for themselves and their family.
                       </p>
                       
                       <p className="text-lg leading-relaxed">
-                        Por isso, desenvolvemos ambientes que unem ciência, tecnologia e emoção, pensados para preservar o equilíbrio físico, mental e social em missões prolongadas.
-                        Cada detalhe da estação — das paredes imersivas às áreas de lazer, academias, escolas e centros médicos — foi criado para garantir que nossos habitantes possam viver bem, manter vínculos afetivos e se sentir em casa, mesmo entre as estrelas.
+                        That's why we develop environments that unite science, technology and emotion, designed to preserve physical, mental and social balance during extended missions.
+                        Every detail of the station — from immersive walls to leisure areas, gyms, schools and medical centers — was created to ensure that our inhabitants can live well, maintain emotional bonds and feel at home, even among the stars.
                       </p>
                       
                       <p className="text-lg leading-relaxed font-semibold">
-                        Cuidar do bem-estar é cuidar do conhecimento.
+                        Caring for well-being is caring for knowledge.
                       </p>
                       
                       <p className="text-lg leading-relaxed">
-                        Porque o verdadeiro progresso humano não está apenas em chegar mais longe, mas em tornar cada jornada um espaço de vida plena — para o pesquisador e para todos que o acompanham.
+                        Because true human progress is not just about going further, but making each journey a space of full life — for the researcher and everyone who accompanies them.
                       </p>
                     </div>
                   </CardContent>
@@ -70,32 +70,32 @@ const ExploreCosmora = () => {
                 <Card>
                   <CardContent className="pt-6">
                     <div className="prose prose-lg max-w-none space-y-6 text-foreground">
-                      <h2 className="text-2xl font-bold mb-4 text-foreground">Aspectos da Casa</h2>
+                      <h2 className="text-2xl font-bold mb-4 text-foreground">House Aspects</h2>
                       
-                      <h3 className="text-xl font-semibold mt-6 mb-3 text-foreground">Paredes Externas / Estrutura</h3>
+                      <h3 className="text-xl font-semibold mt-6 mb-3 text-foreground">External Walls / Structure</h3>
                       
                       <p className="text-lg leading-relaxed">
-                        A estrutura é projetada para ser modular e leve, inspirada em princípios de arquitetura espacial da NASA, como habitações infláveis e módulos rígidos pré-fabricados, que visam otimizar massa, volume e segurança estrutural.
+                        The structure is designed to be modular and lightweight, inspired by NASA space architecture principles, such as inflatable habitats and pre-fabricated rigid modules, which aim to optimize mass, volume and structural safety.
                       </p>
                       
                       <p className="text-lg leading-relaxed">
-                        Os materiais estruturais preferenciais incluem ligas metálicas leves ou compósitos híbridos — como alumínio, ligas de alumínio-carbono ou compósitos sandwich — que combinam resistência mecânica com baixíssima densidade.
+                        Preferred structural materials include lightweight metal alloys or hybrid composites — such as aluminum, aluminum-carbon alloys or sandwich composites — that combine mechanical strength with very low density.
                       </p>
                       
                       <p className="text-lg leading-relaxed">
-                        Para proteção contra radiação e controle térmico, utiliza-se um recurso similar ao conceito de Water Wall da NASA, em que elementos de parede são recheados com água ou soluções líquidas que funcionam como escudo térmico e radiação, integrando também funções de reciclagem de água e tratamento atmosférico.
+                        For radiation protection and thermal control, a resource similar to NASA's Water Wall concept is used, where wall elements are filled with water or liquid solutions that function as thermal and radiation shields, also integrating water recycling and atmospheric treatment functions.
                       </p>
                       
                       <p className="text-lg leading-relaxed">
-                        Os sistemas de troca de calor (thermal control loops) são empregados em habitats reais da NASA, usando circuitos líquidos para dissipar calor através de radiadores conectados estruturalmente à carcaça ou backbone do habitat. Esses sistemas usam juntas rotativas ("rotary joints") ou conexões flexíveis para acomodar movimento ou pressurização variável.
+                        Heat exchange systems (thermal control loops) are employed in real NASA habitats, using liquid circuits to dissipate heat through radiators connected structurally to the habitat carcass or backbone. These systems use rotary joints or flexible connections to accommodate movement or variable pressurization.
                       </p>
                       
                       <p className="text-sm text-muted-foreground italic mt-4">
-                        Nota: A aplicação exata de ligas alumínio-lítio-titânio ou a integração total com radiadores hidráulicos precisa de estudo específico para viabilidade, mas os princípios de laços térmicos líquidos e isolamento com recursos líquidos são validados.
+                        Note: The exact application of aluminum-lithium-titanium alloys or total integration with hydraulic radiators requires specific feasibility study, but the principles of liquid thermal loops and insulation with liquid resources are validated.
                       </p>
                       
                       <div className="mt-8 p-6 bg-muted/50 rounded-lg border border-border/50">
-                        <h4 className="text-lg font-semibold mb-3 text-foreground">Vídeo Explicativo</h4>
+                        <h4 className="text-lg font-semibold mb-3 text-foreground">Explanatory Video</h4>
                         <a 
                           href="https://www.youtube.com/watch?v=bVzppWSIFU0" 
                           target="_blank" 
@@ -108,7 +108,7 @@ const ExploreCosmora = () => {
                       </div>
                       
                       <div className="mt-8 pt-6 border-t border-border/50">
-                        <h4 className="text-lg font-semibold mb-4 text-foreground">Fontes e Referências</h4>
+                        <h4 className="text-lg font-semibold mb-4 text-foreground">Sources and References</h4>
                         <ul className="space-y-2 text-sm text-muted-foreground">
                           <li>
                             <a 

@@ -28,7 +28,7 @@ const NossaMissao = () => {
             onClick={() => navigate(-1)}
           >
             <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-            Voltar
+            Back
           </Button>
 
           {/* Header */}
@@ -42,16 +42,16 @@ const NossaMissao = () => {
               <Target className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl font-bold mb-4 text-gradient-cosmic">
-              Nossa Missão
+              Our Mission
             </h1>
             <p className="text-2xl text-muted-foreground">
-              Explorar, Inovar e Habitar o Cosmos
+              Explore, Innovate and Inhabit the Cosmos
             </p>
           </div>
 
           {/* Content Sections */}
           <div className="space-y-12">
-            {/* Visão */}
+            {/* Vision */}
             <Card 
               ref={section1.ref}
               className={`p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 transition-all duration-1000 ${
@@ -60,13 +60,13 @@ const NossaMissao = () => {
             >
               <div className="space-y-4 text-lg leading-relaxed">
                 <p>
-                  Na Cosmora, acreditamos que morar no espaço não é para todos — é para quem respira curiosidade, ama o universo e quer explorar além da Terra. Nossa missão é criar casas espaciais seguras, confortáveis e inspiradoras, feitas sob medida para entusiastas, cientistas e exploradores apaixonados pelo cosmos.
+                  At Cosmora, we believe that living in space isn't for everyone — it's for those who breathe curiosity, love the universe and want to explore beyond Earth. Our mission is to create safe, comfortable and inspiring space homes, tailor-made for enthusiasts, scientists and explorers passionate about the cosmos.
                 </p>
                 <p>
-                  Para isso, desenvolvemos testes de perfil e simulações personalizadas, que ajudam a entender como cada pessoa se adapta à vida espacial, ajustando gravidade artificial, microclima e experiências a bordo de acordo com suas necessidades e potencial.
+                  To achieve this, we develop profile tests and personalized simulations that help understand how each person adapts to space life, adjusting artificial gravity, microclimate and onboard experiences according to their needs and potential.
                 </p>
                 <p>
-                  Cada inovação é pensada para garantir conforto, segurança e prazer em cada detalhe, combinando ciência de ponta com cuidado humano. Na Cosmora, morar no espaço é um privilégio para quem quer explorar, aprender e viver o universo de forma intensa e consciente.
+                  Each innovation is designed to ensure comfort, safety and pleasure in every detail, combining cutting-edge science with human care. At Cosmora, living in space is a privilege for those who want to explore, learn and experience the universe in an intense and conscious way.
                 </p>
               </div>
             </Card>
@@ -79,17 +79,17 @@ const NossaMissao = () => {
               }`}
             >
               <h3 className="text-3xl font-semibold mb-4">
-                Faça Parte da Nossa Visão
+                Be Part of Our Vision
               </h3>
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Descubra se você tem o perfil para viver entre as estrelas.
+                Discover if you have the profile to live among the stars.
               </p>
               <Link to="/auth?mode=signup">
                 <Button 
                   size="lg"
                   className="rounded-full bg-primary hover:bg-primary/90 hover:scale-105 shadow-cosmic text-lg px-10 py-6 transition-all duration-300"
                 >
-                  Começar Agora
+                  Start Now
                 </Button>
               </Link>
             </Card>

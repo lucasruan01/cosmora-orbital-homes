@@ -41,15 +41,15 @@ const JanelasInteligentes = () => {
   const handleTestClick = () => {
     if (!user) {
       toast({
-        title: 'Autenticação necessária',
-        description: 'Antes crie uma conta ou entre numa existente.',
+        title: 'Authentication required',
+        description: 'Please create an account or sign in to an existing one.',
         variant: 'destructive',
       });
       navigate('/auth?mode=signup');
     } else {
       toast({
-        title: 'Em breve!',
-        description: 'O teste de perfil estará disponível em breve.',
+        title: 'Coming soon!',
+        description: 'The profile test will be available soon.',
       });
     }
   };
@@ -66,7 +66,7 @@ const JanelasInteligentes = () => {
             onClick={() => navigate(-1)}
           >
             <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-            Voltar
+            Back
           </Button>
 
           {/* Header */}
@@ -80,31 +80,31 @@ const JanelasInteligentes = () => {
               <Eye className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl font-bold mb-4 text-gradient-cosmic">
-              Janelas Inteligentes
+              Smart Windows
             </h1>
             <p className="text-2xl text-muted-foreground">
-              Proteção, Transparência e Controle
+              Protection, Transparency and Control
             </p>
           </div>
 
           {/* Content Sections */}
           <div className="space-y-12">
-            {/* Visão Geral */}
+            {/* Overview */}
             <Card 
               ref={section1.ref}
               className={`p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 transition-all duration-1000 ${
                 section1.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Visão Geral:</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Overview:</h2>
               <p className="text-lg leading-relaxed">
-                As janelas inteligentes da Cosmora foram criadas para unir tecnologia, segurança e beleza em um só design.
-                Elas oferecem vistas panorâmicas do espaço e se ajustam automaticamente à luz solar, bloqueando radiação UV e calor.
-                O resultado é um ambiente sempre confortável e harmonioso, em qualquer momento do dia — com o universo inteiro ao alcance dos olhos.
+                Cosmora's smart windows were created to unite technology, safety and beauty in a single design.
+                They offer panoramic views of space and automatically adjust to sunlight, blocking UV radiation and heat.
+                The result is an environment that's always comfortable and harmonious, at any time of day — with the entire universe within reach.
               </p>
             </Card>
 
-            {/* Como funcionam */}
+            {/* How they work */}
             <Card 
               ref={section2.ref}
               className={`p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 transition-all duration-1000 ${
@@ -112,72 +112,72 @@ const JanelasInteligentes = () => {
               }`}
             >
               <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">
-                Como funcionam:
+                How they work:
               </h2>
               
               <div className="space-y-8">
-                {/* 1. Vidros Eletrocrômicos */}
+                {/* 1. Electrochromic Glass */}
                 <div>
-                  <h3 className="text-2xl font-semibold mb-4">Vidros Eletrocrômicos</h3>
+                  <h3 className="text-2xl font-semibold mb-4">Electrochromic Glass</h3>
                   <p className="text-lg leading-relaxed">
-                    Desenvolvidos em estudos da NASA, esses vidros mudam de transparência com uma leve carga elétrica, 
-                    escurecendo sob luz intensa e clareando quando necessário, como se "respirassem" com o ambiente.
+                    Developed in NASA studies, these glasses change transparency with a slight electrical charge, 
+                    darkening under intense light and brightening when needed, as if they "breathe" with the environment.
                   </p>
                 </div>
 
-                {/* 2. Filme Metálico Refletivo */}
+                {/* 2. Reflective Metallic Film */}
                 <div>
-                  <h3 className="text-2xl font-semibold mb-4">Filme Metálico Refletivo "Nunsun"</h3>
+                  <h3 className="text-2xl font-semibold mb-4">Reflective Metallic Film "Nunsun"</h3>
                   <p className="text-lg leading-relaxed">
-                    Criado pela NASA, o filme Nunsun reflete calor e brilho solar sem bloquear a vista. Aplicado sobre 
-                    o vidro, ele protege contra radiação infravermelha e ultravioleta, mantendo o interior mais fresco.
+                    Created by NASA, Nunsun film reflects heat and solar glare without blocking the view. Applied to 
+                    the glass, it protects against infrared and ultraviolet radiation, keeping the interior cooler.
                   </p>
                 </div>
 
-                {/* 3. Materiais Estruturais */}
+                {/* 3. Structural Materials */}
                 <div>
-                  <h3 className="text-2xl font-semibold mb-4">Materiais Estruturais Avançados</h3>
+                  <h3 className="text-2xl font-semibold mb-4">Advanced Structural Materials</h3>
                   <p className="text-lg leading-relaxed">
-                    As janelas utilizam camadas de acrílico e policarbonato (leves e resistentes) junto a vidros cerâmicos 
-                    externos, formando um sistema multicamada capaz de resistir à pressão e até a micrometeoritos.
+                    Windows use layers of acrylic and polycarbonate (lightweight and resistant) along with external ceramic glass, 
+                    forming a multi-layer system capable of withstanding pressure and even micrometeoroids.
                   </p>
                 </div>
 
-                {/* 4. Controle Adaptativo */}
+                {/* 4. Adaptive Control */}
                 <div>
-                  <h3 className="text-2xl font-semibold mb-4">Controle Adaptativo</h3>
+                  <h3 className="text-2xl font-semibold mb-4">Adaptive Control</h3>
                   <p className="text-lg leading-relaxed">
-                    Sensores monitoram a luminosidade e aplicam ajustes automáticos de opacidade, equilibrando proteção 
-                    e visibilidade em tempo real.
+                    Sensors monitor brightness and apply automatic opacity adjustments, balancing protection 
+                    and visibility in real time.
                   </p>
                 </div>
               </div>
             </Card>
 
-            {/* Benefícios */}
+            {/* Benefits */}
             <Card 
               ref={section3.ref}
               className={`p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 transition-all duration-1000 ${
                 section3.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Benefícios na prática:</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Benefits in practice:</h2>
               <ul className="space-y-3 text-lg">
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Protege você da radiação UV e do calor do Sol.</span>
+                  <span>Protects you from UV radiation and Sun heat.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Mantém o conforto visual, sem aquele ofuscamento incômodo.</span>
+                  <span>Maintains visual comfort, without that annoying glare.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Ajuda a manter a estação na temperatura ideal, economizando energia.</span>
+                  <span>Helps keep the station at ideal temperature, saving energy.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Permite vistas seguras e incríveis da Terra e do espaço, como se você estivesse flutuando lá fora.</span>
+                  <span>Allows safe and incredible views of Earth and space, as if you were floating out there.</span>
                 </li>
               </ul>
             </Card>
@@ -191,17 +191,17 @@ const JanelasInteligentes = () => {
             }`}
           >
             <h3 className="text-3xl font-semibold mb-4">
-              Veja o Universo com Clareza
+              See the Universe with Clarity
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Descubra como nossas janelas inteligentes transformam a experiência de viver no espaço.
+              Discover how our smart windows transform the experience of living in space.
             </p>
             <Button 
               size="lg"
               onClick={handleTestClick}
               className="rounded-full bg-primary hover:bg-primary/90 hover:scale-105 shadow-cosmic text-lg px-10 py-6 transition-all duration-300"
             >
-              Faça o Teste de Perfil
+              Take the Profile Test
             </Button>
           </Card>
         </div>

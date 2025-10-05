@@ -54,18 +54,18 @@ const Auth = () => {
     setLoading(true);
 
     try {
-      // Validação de nome
+      // Full name validation
       if (!fullName || fullName.trim().length < 3) {
-        throw new Error('Nome completo deve ter pelo menos 3 caracteres');
+        throw new Error('Full name must be at least 3 characters');
       }
 
-      // Validação de email
+      // Email validation
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
-        throw new Error('Email inválido');
+        throw new Error('Invalid email');
       }
 
-      // Verificar se email já existe
+      // Check if email already exists
       const { data: existingUser } = await supabase
         .from('profiles')
         .select('user_id')
@@ -84,18 +84,18 @@ const Auth = () => {
 
       if (error) {
         if (error.message.includes('already registered')) {
-          throw new Error('Este email já está cadastrado. Faça login.');
+          throw new Error('This email is already registered. Please log in.');
         }
         throw error;
       }
 
       toast({
-        title: 'Conta criada com sucesso!',
-        description: 'Bem-vindo à Cosmora.',
+        title: 'Account created successfully!',
+        description: 'Welcome to Cosmora.',
       });
     } catch (error: any) {
       toast({
-        title: 'Erro ao criar conta',
+        title: 'Error creating account',
         description: error.message,
         variant: 'destructive',
       });
@@ -109,10 +109,10 @@ const Auth = () => {
     setLoading(true);
 
     try {
-      // Validação de email
+      // Email validation
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
-        throw new Error('Email inválido');
+        throw new Error('Invalid email');
       }
 
       const { error } = await supabase.auth.signInWithPassword({
@@ -122,18 +122,18 @@ const Auth = () => {
 
       if (error) {
         if (error.message.includes('Invalid login credentials')) {
-          throw new Error('Email ou senha incorretos');
+          throw new Error('Incorrect email or password');
         }
         throw error;
       }
 
       toast({
-        title: 'Login realizado!',
-        description: 'Bem-vindo de volta.',
+        title: 'Login successful!',
+        description: 'Welcome back.',
       });
     } catch (error: any) {
       toast({
-        title: 'Erro no login',
+        title: 'Login error',
         description: error.message,
         variant: 'destructive',
       });
@@ -153,7 +153,7 @@ const Auth = () => {
           className="absolute top-4 left-4 rounded-full"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
-          Voltar
+          Back
         </Button>
 
         <div className="text-center mb-8 mt-8">
@@ -161,10 +161,10 @@ const Auth = () => {
             <Rocket className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-3xl font-bold mb-2">
-            Bem-vindo à Cosmora
+            Welcome to Cosmora
           </h1>
           <p className="text-muted-foreground">
-            Escolha uma opção abaixo
+            Choose an option below
           </p>
         </div>
 
@@ -181,7 +181,7 @@ const Auth = () => {
                 <Input
                   id="login-email"
                   type="email"
-                  placeholder="seu@email.com"
+                  placeholder="your@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -190,7 +190,7 @@ const Auth = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="login-password">Senha</Label>
+                <Label htmlFor="login-password">Password</Label>
                 <Input
                   id="login-password"
                   type="password"
@@ -208,7 +208,7 @@ const Auth = () => {
                 disabled={loading}
                 className="w-full rounded-full bg-primary hover:bg-primary/90 text-lg py-6 mt-6"
               >
-                {loading ? 'Processando...' : 'Entrar'}
+                {loading ? 'Processing...' : 'Login'}
               </Button>
             </form>
           </TabsContent>
@@ -216,11 +216,11 @@ const Auth = () => {
           <TabsContent value="signup">
             <form onSubmit={handleSignUp} className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="signup-name">Nome Completo</Label>
+                <Label htmlFor="signup-name">Full Name</Label>
                 <Input
                   id="signup-name"
                   type="text"
-                  placeholder="Seu nome completo"
+                  placeholder="Your full name"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
                   required
@@ -233,7 +233,7 @@ const Auth = () => {
                 <Input
                   id="signup-email"
                   type="email"
-                  placeholder="seu@email.com"
+                  placeholder="your@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -242,7 +242,7 @@ const Auth = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="signup-password">Senha</Label>
+                <Label htmlFor="signup-password">Password</Label>
                 <Input
                   id="signup-password"
                   type="password"
@@ -260,7 +260,7 @@ const Auth = () => {
                 disabled={loading}
                 className="w-full rounded-full bg-primary hover:bg-primary/90 text-lg py-6 mt-6"
               >
-                {loading ? 'Processando...' : 'Criar Conta'}
+                {loading ? 'Processing...' : 'Create Account'}
               </Button>
             </form>
           </TabsContent>

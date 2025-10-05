@@ -10,28 +10,28 @@ import { useScrollReveal } from '@/hooks/useScrollReveal';
 const teamMembers = [
   {
     name: "Thalles",
-    role: "o Engenheiro da Experiência",
-    description: "Com precisão técnica e sensibilidade artística, Thalles transforma códigos e pixels em emoção. É ele quem cria os sistemas inteligentes e as interfaces que dão vida à Cosmora, unindo tecnologia e estética em perfeita sinergia. Cada detalhe carrega seu toque — o de quem entende que a verdadeira inovação acontece quando ciência e arte respiram juntas."
+    role: "the Experience Engineer",
+    description: "With technical precision and artistic sensitivity, Thalles transforms codes and pixels into emotion. He creates the intelligent systems and interfaces that bring Cosmora to life, uniting technology and aesthetics in perfect synergy. Every detail carries his touch — that of someone who understands that true innovation happens when science and art breathe together."
   },
   {
     name: "Débora",
-    role: "a Visionária das Formas",
-    description: "Com um olhar que enxerga além do óbvio, Débora transforma ideias em experiências visuais que respiram propósito. É ela quem dá rosto e alma à Cosmora, desenhando o futuro com traços que unem estética, emoção e significado. Sob suas mãos, cada Domus se torna mais do que um espaço — torna-se um fragmento do infinito habitável."
+    role: "the Visionary of Forms",
+    description: "With a gaze that sees beyond the obvious, Débora transforms ideas into visual experiences that breathe purpose. She gives face and soul to Cosmora, designing the future with strokes that unite aesthetics, emotion and meaning. Under her hands, each Domus becomes more than a space — it becomes a fragment of the inhabitable infinite."
   },
   {
     name: "Lucas",
-    role: "o Arquiteto da Estrutura",
-    description: "Lucas é quem constrói os alicerces que sustentam nossa missão. Sua mente analítica e organizada transforma conceitos em sistemas sólidos, escaláveis e coerentes. Ele conecta cada parte da Cosmora, garantindo que tudo funcione em perfeita harmonia — da ideia ao funcionamento real."
+    role: "the Structure Architect",
+    description: "Lucas builds the foundations that sustain our mission. His analytical and organized mind transforms concepts into solid, scalable and coherent systems. He connects every part of Cosmora, ensuring everything works in perfect harmony — from idea to actual operation."
   },
   {
     name: "Carol",
-    role: "a Mente Inquieta da Descoberta",
-    description: "Curiosa por natureza e movida pela busca incessante do novo, Carol é a bússola da Cosmora. Ela pesquisa, documenta e conecta mundos, revelando caminhos onde antes só havia perguntas. Sua energia mantém a inovação acesa — sempre humana, sempre consciente."
+    role: "the Restless Mind of Discovery",
+    description: "Curious by nature and driven by the relentless search for the new, Carol is Cosmora's compass. She researches, documents and connects worlds, revealing paths where before there were only questions. Her energy keeps innovation alive — always human, always conscious."
   },
   {
     name: "Lívia",
-    role: "a Guardiã da Ordem e da Palavra",
-    description: "Entre dados, histórias e significados, Lívia encontra harmonia. Sua escrita costura o pensamento coletivo e dá clareza à complexidade. É ela quem traduz o universo da Cosmora em narrativas compreensíveis, transformando a técnica em poesia e a estrutura em inspiração."
+    role: "the Guardian of Order and Word",
+    description: "Between data, stories and meanings, Lívia finds harmony. Her writing stitches collective thought and brings clarity to complexity. She translates Cosmora's universe into understandable narratives, transforming technique into poetry and structure into inspiration."
   }
 ];
 
@@ -54,7 +54,7 @@ const Equipe = () => {
             onClick={() => navigate(-1)}
           >
             <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-            Voltar
+            Back
           </Button>
 
           {/* Header */}
@@ -68,10 +68,10 @@ const Equipe = () => {
               <Users className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl font-bold mb-4 text-gradient-cosmic">
-              Equipe
+              Team
             </h1>
             <p className="text-2xl text-muted-foreground">
-              As Mentes por Trás da Cosmora
+              The Minds Behind Cosmora
             </p>
           </div>
 

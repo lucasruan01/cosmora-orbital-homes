@@ -32,7 +32,7 @@ const Tecnologia = () => {
             onClick={() => navigate(-1)}
           >
             <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-            Voltar
+            Back
           </Button>
 
           {/* Header */}
@@ -46,10 +46,10 @@ const Tecnologia = () => {
               <Cpu className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl font-bold mb-4 text-gradient-cosmic">
-              Tecnologia
+              Technology
             </h1>
             <p className="text-2xl text-muted-foreground">
-              Inovação de Ponta para a Vida no Espaço
+              Cutting-Edge Innovation for Life in Space
             </p>
           </div>
 
@@ -63,76 +63,76 @@ const Tecnologia = () => {
               }`}
             >
               <p className="text-lg leading-relaxed">
-                Na Cosmora, usamos tecnologia de ponta para transformar o espaço em um lar confortável, seguro e sustentável.
+                At Cosmora, we use cutting-edge technology to transform space into a comfortable, safe and sustainable home.
               </p>
             </Card>
 
-            {/* Gravidade Artificial & Engenharia */}
+            {/* Artificial Gravity & Engineering */}
             <Card 
               ref={section2.ref}
               className={`p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 transition-all duration-1000 ${
                 section2.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Gravidade Artificial & Engenharia</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Artificial Gravity & Engineering</h2>
               <p className="text-lg leading-relaxed">
-                Criamos gravidade artificial controlada por rotação, baseada em princípios validados pela NASA, garantindo conforto para o corpo humano. Nossas estações são projetadas com modelagem estrutural 3D e simulações físicas, testando proporções e experiências em microgravidade antes de cada construção.
+                We create controlled artificial gravity by rotation, based on principles validated by NASA, ensuring comfort for the human body. Our stations are designed with 3D structural modeling and physical simulations, testing proportions and experiences in microgravity before each construction.
               </p>
             </Card>
 
-            {/* Materiais Inteligentes */}
+            {/* Smart Materials */}
             <Card 
               ref={section3.ref}
               className={`p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 transition-all duration-1000 ${
                 section3.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Materiais Inteligentes</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Smart Materials</h2>
               <p className="text-lg leading-relaxed">
-                Vidros eletrocrômicos, revestimentos termoativos e materiais avançados garantem proteção, conforto térmico e eficiência energética, baseados em estudos de janelas espaciais da NASA.
+                Electrochromic glass, thermoactive coatings and advanced materials ensure protection, thermal comfort and energy efficiency, based on NASA space window studies.
               </p>
             </Card>
 
-            {/* Energia & Sustentabilidade */}
+            {/* Energy & Sustainability */}
             <Card 
               ref={section4.ref}
               className={`p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 transition-all duration-1000 ${
                 section4.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Energia & Sustentabilidade</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Energy & Sustainability</h2>
               <p className="text-lg leading-relaxed">
-                A estação utiliza conceitos de fusão limpa com Hélio-3 e sistemas inteligentes de reciclagem de ar, água e nutrientes, monitorados por sensores IoT, para manter tudo sustentável e eficiente.
+                The station uses concepts of clean fusion with Helium-3 and intelligent recycling systems for air, water and nutrients, monitored by IoT sensors, to keep everything sustainable and efficient.
               </p>
             </Card>
 
-            {/* Design e Experiência Humana */}
+            {/* Design and Human Experience */}
             <Card 
               ref={section5.ref}
               className={`p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 transition-all duration-1000 ${
                 section5.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Design e Experiência Humana</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Design and Human Experience</h2>
               <p className="text-lg leading-relaxed">
-                Interfaces holográficas, ambientes responsivos e controles por gestos e voz tornam a vida na estação imersiva e intuitiva. Cada espaço é projetado com design emocional, modelagem 3D e texturização realista, garantindo conforto visual e funcionalidade.
+                Holographic interfaces, responsive environments and gesture and voice controls make life on the station immersive and intuitive. Each space is designed with emotional design, 3D modeling and realistic texturing, ensuring visual comfort and functionality.
               </p>
             </Card>
 
-            {/* Infraestrutura Digital */}
+            {/* Digital Infrastructure */}
             <Card 
               ref={section6.ref}
               className={`p-8 rounded-3xl border-0 bg-gradient-to-br from-card to-muted/30 transition-all duration-1000 ${
                 section6.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Infraestrutura Digital & Propósito Científico</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gradient-cosmic">Digital Infrastructure & Scientific Purpose</h2>
               <div className="space-y-4 text-lg leading-relaxed">
                 <p>
-                  Nosso site e sistemas internos usam React, Node.js e bancos de dados modernos, integrando módulos da estação, sensores e usuários em tempo real. Hospedagem e deploy são feitos no GODADDY REGISTRY, com versionamento no GitHub, garantindo estabilidade e inovação constante.
+                  Our website and internal systems use React, Node.js and modern databases, integrating station modules, sensors and users in real time. Hosting and deployment are done on GODADDY REGISTRY, with versioning on GitHub, ensuring stability and constant innovation.
                 </p>
                 <p>
-                  Transformamos pesquisas reais da NASA em uma experiência acessível e inspiradora, mostrando como seria viver, explorar e evoluir fora da Terra.
+                  We transform real NASA research into an accessible and inspiring experience, showing what it would be like to live, explore and evolve beyond Earth.
                 </p>
               </div>
             </Card>

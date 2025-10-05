@@ -25,8 +25,8 @@ const Footer = ({ sources }: FooterProps) => {
   const handleNewsletterSubmit = async () => {
     if (!newsletterEmail || !newsletterEmail.includes('@')) {
       toast({
-        title: 'Email inválido',
-        description: 'Por favor, insira um email válido.',
+        title: 'Invalid email',
+        description: 'Please enter a valid email.',
         variant: 'destructive',
       });
       return;
@@ -40,8 +40,8 @@ const Footer = ({ sources }: FooterProps) => {
       if (error) {
         if (error.code === '23505') {
           toast({
-            title: 'Email já cadastrado',
-            description: 'Este email já está inscrito na newsletter.',
+            title: 'Email already registered',
+            description: 'This email is already subscribed to the newsletter.',
             variant: 'destructive',
           });
         } else {
@@ -49,15 +49,15 @@ const Footer = ({ sources }: FooterProps) => {
         }
       } else {
         toast({
-          title: 'Inscrição realizada!',
-          description: 'Você receberá nossas novidades em breve.',
+          title: 'Subscription successful!',
+          description: 'You will receive our news soon.',
         });
         setNewsletterEmail('');
       }
     } catch (error) {
       toast({
-        title: 'Erro',
-        description: 'Não foi possível completar a inscrição.',
+        title: 'Error',
+        description: 'Could not complete subscription.',
         variant: 'destructive',
       });
     }
