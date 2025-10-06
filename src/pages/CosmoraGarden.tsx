@@ -20,7 +20,7 @@ const CosmoraGarden = () => {
             className="mb-8 hover:bg-primary/10"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Voltar
+            Back
           </Button>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
@@ -29,9 +29,9 @@ const CosmoraGarden = () => {
                 Cosmora Garden
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Nosso jardim hidropônico orbital é uma maravilha da agricultura espacial. Utilizando 
-                tecnologia de ponta e sistemas automatizados, cultivamos alimentos frescos e nutritivos 
-                em ambiente de microgravidade, garantindo autossuficiência alimentar para todos os residentes.
+                Our orbital hydroponic garden is a marvel of space agriculture. Using 
+                cutting-edge technology and automated systems, we grow fresh and nutritious food 
+                in a microgravity environment, ensuring food self-sufficiency for all residents.
               </p>
             </div>
             
@@ -47,43 +47,43 @@ const CosmoraGarden = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-20">
             <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-purple-500/5 border border-primary/10">
               <Sprout className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Cultivo Hidropônico</h3>
+              <h3 className="text-2xl font-bold mb-4">Hydroponic Cultivation</h3>
               <p className="text-muted-foreground">
-                Sistema avançado de cultivo sem solo, otimizado para microgravidade. Produz vegetais, 
-                frutas e ervas com 40% mais eficiência que na Terra.
+                Advanced soilless cultivation system, optimized for microgravity. Produces vegetables, 
+                fruits and herbs with 40% more efficiency than on Earth.
               </p>
             </div>
 
             <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-purple-500/5 border border-primary/10">
               <Droplets className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Reciclagem de Água</h3>
+              <h3 className="text-2xl font-bold mb-4">Water Recycling</h3>
               <p className="text-muted-foreground">
-                Sistema fechado de reciclagem que reutiliza 98% da água, garantindo uso sustentável 
-                dos recursos hídricos preciosos no espaço.
+                Closed-loop recycling system that reuses 98% of water, ensuring sustainable use 
+                of precious water resources in space.
               </p>
             </div>
 
             <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-purple-500/5 border border-primary/10">
               <Sun className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Iluminação LED</h3>
+              <h3 className="text-2xl font-bold mb-4">LED Lighting</h3>
               <p className="text-muted-foreground">
-                Espectro de luz otimizado por IA para maximizar fotossíntese e crescimento, 
-                ajustado automaticamente para cada tipo de planta.
+                AI-optimized light spectrum to maximize photosynthesis and growth, 
+                automatically adjusted for each plant type.
               </p>
             </div>
           </div>
 
           <div className="bg-gradient-to-br from-primary/10 to-purple-500/10 rounded-3xl p-12">
-            <h2 className="text-3xl font-bold mb-6">Agricultura do Futuro</h2>
+            <h2 className="text-3xl font-bold mb-6">Agriculture of the Future</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              O Cosmora Garden representa a vanguarda da agricultura espacial. Com braços robóticos 
-              de precisão e sensores avançados, cada planta recebe cuidado individualizado, resultando 
-              em produtos de qualidade superior.
+              Cosmora Garden represents the vanguard of space agriculture. With precision 
+              robotic arms and advanced sensors, each plant receives individualized care, resulting 
+              in superior quality products.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Nossa horta orbital produz mais de 2 toneladas de alimentos frescos mensalmente, 
-              incluindo vegetais folhosos, tomates, morangos, e ervas aromáticas. Tudo cultivado 
-              sem pesticidas, em ambiente controlado e com nutrientes otimizados.
+              Our orbital garden produces over 2 tons of fresh food monthly, 
+              including leafy vegetables, tomatoes, strawberries, and aromatic herbs. All grown 
+              without pesticides, in a controlled environment with optimized nutrients.
             </p>
           </div>
         </div>

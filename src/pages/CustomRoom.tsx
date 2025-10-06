@@ -20,7 +20,7 @@ const CustomRoom = () => {
             className="mb-8 hover:bg-primary/10"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Voltar
+            Back
           </Button>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
@@ -29,9 +29,9 @@ const CustomRoom = () => {
                 Custom Room
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Cada residência na Cosmora é um santuário personalizado de conforto e tecnologia. 
-                Nossos quartos customizáveis oferecem vistas espetaculares da Terra enquanto proporcionam 
-                o máximo em privacidade, conforto e funcionalidade para a vida no espaço.
+                Each residence at Cosmora is a personalized sanctuary of comfort and technology. 
+                Our customizable rooms offer spectacular views of Earth while providing 
+                maximum privacy, comfort and functionality for life in space.
               </p>
             </div>
             
@@ -47,43 +47,43 @@ const CustomRoom = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-20">
             <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-purple-500/5 border border-primary/10">
               <Home className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Design Personalizável</h3>
+              <h3 className="text-2xl font-bold mb-4">Customizable Design</h3>
               <p className="text-muted-foreground">
-                Paredes modulares e mobiliário adaptável permitem que você configure seu espaço 
-                exatamente como deseja, do minimalista ao luxuoso.
+                Modular walls and adaptable furniture allow you to configure your space 
+                exactly as you desire, from minimalist to luxurious.
               </p>
             </div>
 
             <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-purple-500/5 border border-primary/10">
               <Sparkles className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Janelas Panorâmicas</h3>
+              <h3 className="text-2xl font-bold mb-4">Panoramic Windows</h3>
               <p className="text-muted-foreground">
-                Janelas inteligentes de vidro reforçado oferecem vistas deslumbrantes da Terra, 
-                com controle de opacidade e proteção UV integrada.
+                Smart reinforced glass windows offer stunning views of Earth, 
+                with opacity control and integrated UV protection.
               </p>
             </div>
 
             <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-purple-500/5 border border-primary/10">
               <Settings className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Controle Inteligente</h3>
+              <h3 className="text-2xl font-bold mb-4">Smart Control</h3>
               <p className="text-muted-foreground">
-                Sistema de automação completo controla iluminação, temperatura, privacidade e 
-                entretenimento através de comandos de voz ou app.
+                Complete automation system controls lighting, temperature, privacy and 
+                entertainment through voice commands or app.
               </p>
             </div>
           </div>
 
           <div className="bg-gradient-to-br from-primary/10 to-purple-500/10 rounded-3xl p-12">
-            <h2 className="text-3xl font-bold mb-6">Seu Lar Entre as Estrelas</h2>
+            <h2 className="text-3xl font-bold mb-6">Your Home Among the Stars</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Os Custom Rooms da Cosmora foram projetados para serem verdadeiros lares no espaço. 
-              Cada quarto possui 50m² de área privativa, com janelas que oferecem vistas de 180° 
-              do planeta Terra e das estrelas.
+              Cosmora's Custom Rooms are designed to be true homes in space. 
+              Each room has 50m² of private area, with windows that offer 180° views 
+              of planet Earth and the stars.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Materiais de luxo, isolamento acústico premium, e sistemas de climatização individual 
-              garantem conforto absoluto. O mobiliário inteligente se adapta à microgravidade, 
-              oferecendo funcionalidade tanto em ambiente de gravidade artificial quanto em flutuação livre.
+              Luxury materials, premium acoustic isolation, and individual climate control systems 
+              ensure absolute comfort. Smart furniture adapts to microgravity, 
+              offering functionality in both artificial gravity and free-floating environments.
             </p>
           </div>
         </div>
